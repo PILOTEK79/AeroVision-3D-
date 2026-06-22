@@ -114,9 +114,10 @@ color:#38bdf8;
 }
 
 .hero h1{
+
 font-size:5rem;
-line-height:1.05;
-margin-bottom:25px;
+
+line-height:1;
 }
 
 .hero p{
@@ -188,10 +189,35 @@ box-shadow:
 0 40px 120px rgba(56,189,248,.35);
 }
 
+.hero-aircraft{
+
+animation:
+floatPlane 6s ease-in-out infinite;
+}
+
+@keyframes floatPlane{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
 .hero-aircraft img:hover{
+
 transform:
-translateY(-10px)
-scale(1.02);
+scale(1.04);
+
+box-shadow:
+0 50px 150px rgba(56,189,248,.5);
 }
 
 /* INFO */
