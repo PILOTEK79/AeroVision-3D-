@@ -312,3 +312,25 @@ transform:
 translateY(-10px)
 scale(1.02);
 }
+
+.hero-aircraft{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero-aircraft img{
+width:700px;
+max-width:100%;
+height:auto;
+
+border-radius:25px;
+
+object-fit:cover;
+
+box-shadow:
+0 25px 80px rgba(56,189,248,.25);
+
+transition:.5s;
+}
