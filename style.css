@@ -54,13 +54,21 @@ color:#38bdf8;
 /* HERO */
 
 .hero{
+
 min-height:100vh;
-display:flex;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
 align-items:center;
-justify-content:space-between;
-padding:0 8%;
+
 gap:50px;
+
+padding:0 8%;
+
 position:relative;
+
 overflow:hidden;
 }
 
