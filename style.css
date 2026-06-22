@@ -297,25 +297,21 @@ cursor:pointer;
 .hero-aircraft img{
 
 width:700px;
-
 max-width:100%;
 
-animation:
-floatPlane 6s ease-in-out infinite;
+border-radius:25px;
+
+object-fit:cover;
+
+box-shadow:
+0 25px 80px rgba(56,189,248,.25);
+
+transition:.5s;
 }
 
-@keyframes floatPlane{
+.hero-aircraft img:hover{
 
-0%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-20px);
-}
-
-100%{
-transform:translateY(0);
-}
-
+transform:
+translateY(-10px)
+scale(1.02);
 }
