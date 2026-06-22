@@ -14,6 +14,11 @@ linear-gradient(
 );
 
 background-attachment:fixed;
+
+color:white;
+overflow-x:hidden;
+}
+background-attachment:fixed;
 }
 
 nav{
