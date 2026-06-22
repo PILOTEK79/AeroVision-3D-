@@ -191,3 +191,131 @@ text-align:center;
 
 color:#94a3b8;
 }
+
+/* HERO UPGRADE */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 8%;
+
+gap:50px;
+}
+
+.hero-content{
+
+max-width:650px;
+}
+
+.badge{
+
+display:inline-block;
+
+padding:10px 20px;
+
+background:
+rgba(56,189,248,.15);
+
+border:1px solid #38bdf8;
+
+border-radius:50px;
+
+margin-bottom:25px;
+
+color:#38bdf8;
+}
+
+.hero h1{
+
+font-size:6rem;
+
+line-height:1.05;
+
+margin-bottom:25px;
+}
+
+.hero p{
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+margin-bottom:35px;
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:20px;
+}
+
+.primary-btn{
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:15px;
+
+background:
+linear-gradient(
+45deg,
+#38bdf8,
+#0ea5e9
+);
+
+color:white;
+
+cursor:pointer;
+}
+
+.secondary-btn{
+
+padding:18px 40px;
+
+border:1px solid #38bdf8;
+
+background:transparent;
+
+color:white;
+
+border-radius:15px;
+
+cursor:pointer;
+}
+
+.hero-aircraft img{
+
+width:700px;
+
+max-width:100%;
+
+animation:
+floatPlane 6s ease-in-out infinite;
+}
+
+@keyframes floatPlane{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
