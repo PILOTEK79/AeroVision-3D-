@@ -93,7 +93,6 @@ transparent 70%
 }
 
 .hero-content{
-flex:1;
 max-width:650px;
 z-index:2;
 }
@@ -171,7 +170,6 @@ transform:translateY(-5px);
 }
 
 .hero-aircraft{
-flex:1;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -295,21 +293,32 @@ color:#94a3b8;
 @media(max-width:900px){
 
 .hero{
-flex-direction:column;
+
+grid-template-columns:1fr;
+
 text-align:center;
+
 padding-top:50px;
 }
 
 .hero h1{
+
 font-size:4rem;
 }
 
 .hero-buttons{
+
 justify-content:center;
 }
 
 .nav-links{
+
 display:none;
+}
+
+.hero-aircraft{
+
+margin-top:30px;
 }
 
 }
