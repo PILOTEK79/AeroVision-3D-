@@ -46,7 +46,7 @@ const light =
 new THREE.DirectionalLight(
 0xffffff,
 3
-);
+)
 
 light.position.set(
 5,
@@ -55,6 +55,14 @@ light.position.set(
 );
 
 scene.add(light);
+
+const ambient =
+new THREE.AmbientLight(
+0xffffff,
+1
+);
+
+scene.add(ambient);
 
 camera.position.z=5;
 
