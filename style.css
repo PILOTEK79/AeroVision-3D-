@@ -588,3 +588,32 @@ margin-bottom:10px;
 .stat-card p{
 color:#cbd5e1;
 }
+/* 3D VIEWER */
+
+#viewer3d{
+
+padding:120px 8%;
+
+text-align:center;
+}
+
+#viewer3d h2{
+
+font-size:3rem;
+
+margin-bottom:40px;
+}
+
+#aircraft-viewer{
+
+height:600px;
+
+background:#000;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:
+0 0 50px rgba(56,189,248,.3);
+}
