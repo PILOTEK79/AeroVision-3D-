@@ -1,3 +1,4 @@
+console.log("Script Loaded");
 const popup =
 document.getElementById("popup");
 
