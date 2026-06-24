@@ -8,7 +8,7 @@ document.getElementById("popupTitle");
 const text =
 document.getElementById("popupText");
 
-function showInfo(part){
+window.showInfo = function(part){
 
 popup.style.display="flex";
 
