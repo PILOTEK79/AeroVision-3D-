@@ -14,13 +14,21 @@ popup.style.display="flex";
 
 if(part==="wings"){
 
-title.innerHTML="Aircraft Wings";
+title.innerHTML="🪽 Aircraft Wings";
 
 text.innerHTML=
-"The Boeing 787 wings generate lift and can flex dramatically during flight.";
+`
+Purpose:
+Generate lift and maintain stability.
+
+Fun Fact:
+The Boeing 787 wing can flex several meters upward during turbulence.
+
+Engineering:
+Designed using advanced composite materials.
+`;
 
 }
-
 else if(part==="engines"){
 
 title.innerHTML="Aircraft Engines";
