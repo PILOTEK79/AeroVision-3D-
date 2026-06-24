@@ -384,3 +384,103 @@ cursor:pointer;
 
 font-size:1.5rem;
 }
+
+/* INTERACTIVE DIAGRAM */
+
+.diagram-section{
+
+padding:120px 8%;
+
+text-align:center;
+}
+
+.diagram-section h2{
+
+font-size:3rem;
+
+margin-bottom:50px;
+}
+
+.aircraft-diagram{
+
+position:relative;
+
+max-width:1000px;
+
+margin:auto;
+}
+
+.aircraft-diagram img{
+
+width:100%;
+
+border-radius:25px;
+
+box-shadow:
+0 30px 100px rgba(56,189,248,.25);
+}
+
+.hotspot{
+
+position:absolute;
+
+padding:12px 20px;
+
+border:none;
+
+border-radius:50px;
+
+background:#38bdf8;
+
+color:white;
+
+cursor:pointer;
+
+font-weight:600;
+
+box-shadow:
+0 0 20px rgba(56,189,248,.5);
+
+animation:
+pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+.cockpit{
+
+top:25%;
+left:18%;
+}
+
+.wing{
+
+top:45%;
+left:42%;
+}
+
+.engine{
+
+top:55%;
+left:50%;
+}
+
+.gear{
+
+top:78%;
+left:48%;
+}
