@@ -1,4 +1,5 @@
-console.log("Script Loaded");
+console.log("AeroVision Loaded");
+
 const popup =
 document.getElementById("popup");
 
@@ -16,70 +17,124 @@ if(part==="wings"){
 
 title.innerHTML="🪽 Aircraft Wings";
 
-text.innerHTML=
-`
-Purpose:
-Generate lift and maintain stability.
+text.innerHTML=`
 
-Fun Fact:
-The Boeing 787 wing can flex several meters upward during turbulence.
+<h3>Purpose</h3>
+<p>Generate lift and maintain stability.</p>
 
-Engineering:
-Designed using advanced composite materials.
+<h3>Fun Fact</h3>
+<p>The Boeing 787 wing can flex dramatically during turbulence.</p>
+
+<h3>Engineering</h3>
+<p>Made using advanced composite materials.</p>
+
 `;
 
 }
+
 else if(part==="engines"){
 
-title.innerHTML="Aircraft Engines";
+title.innerHTML="⚙ Aircraft Engines";
 
-text.innerHTML=
-"The Dreamliner uses high-bypass turbofan engines that provide efficient thrust.";
+text.innerHTML=`
+
+<h3>Purpose</h3>
+<p>Provide thrust for flight.</p>
+
+<h3>Fun Fact</h3>
+<p>The Dreamliner uses highly efficient turbofan engines.</p>
+
+`;
 
 }
 
 else if(part==="cockpit"){
 
-title.innerHTML="Cockpit";
+title.innerHTML="🎛 Cockpit";
 
-text.innerHTML=
-"The cockpit contains flight controls, navigation systems, and aircraft displays.";
+text.innerHTML=`
 
-}
+<h3>Purpose</h3>
+<p>Control center of the aircraft.</p>
 
-else if(part==="rudder"){
+<h3>Systems</h3>
+<p>Contains navigation, flight controls, and communication systems.</p>
 
-title.innerHTML="Rudder";
-
-text.innerHTML=
-"The rudder controls yaw and helps the aircraft turn left or right.";
+`;
 
 }
 
 else if(part==="gear"){
 
-title.innerHTML="Landing Gear";
+title.innerHTML="🛞 Landing Gear";
 
-text.innerHTML=
-"The landing gear supports takeoff, landing, and taxiing.";
+text.innerHTML=`
+
+<h3>Purpose</h3>
+<p>Supports takeoff, landing, and taxiing.</p>
+
+<h3>Fun Fact</h3>
+<p>The landing gear retracts after takeoff to reduce drag.</p>
+
+`;
+
+}
+
+else if(part==="rudder"){
+
+title.innerHTML="🧭 Rudder";
+
+text.innerHTML=`
+
+<h3>Purpose</h3>
+<p>Controls yaw movement of the aircraft.</p>
+
+`;
 
 }
 
 else{
 
-title.innerHTML="Aerodynamics";
+title.innerHTML="🛫 Aerodynamics";
 
-text.innerHTML=
-"Lift, drag, thrust, and weight are the four forces that govern flight.";
+text.innerHTML=`
+
+<h3>Four Forces</h3>
+
+<p>
+Lift • Weight • Thrust • Drag
+</p>
+
+`;
 
 }
 
-}
+};
 
 document
 .getElementById("closeBtn")
-.onclick=()=>{
+.onclick = ()=>{
 
 popup.style.display="none";
 
 };
+
+popup.addEventListener("click",(e)=>{
+
+if(e.target===popup){
+
+popup.style.display="none";
+
+}
+
+});
+
+document.addEventListener("keydown",(e)=>{
+
+if(e.key==="Escape"){
+
+popup.style.display="none";
+
+}
+
+});
