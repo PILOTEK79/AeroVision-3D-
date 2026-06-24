@@ -283,20 +283,14 @@ gap:25px;
 }
 
 .system-card{
-background:
-rgba(255,255,255,.05);
+background:rgba(255,255,255,.05);
 
-padding:40px;
+backdrop-filter:blur(20px);
 
-border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
 
-text-align:center;
-
-font-size:1.2rem;
-
-cursor:pointer;
-
-transition:.3s;
+box-shadow:
+0 10px 40px rgba(0,0,0,.3);
 }
 
 .system-card:hover{
