@@ -3,7 +3,7 @@ const scene = new THREE.Scene();
 const camera =
 new THREE.PerspectiveCamera(
 75,
-window.innerWidth/600,
+document.getElementById("aircraft-viewer").clientWidth / 600,
 0.1,
 1000
 );
