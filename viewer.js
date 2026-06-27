@@ -10,7 +10,7 @@ container.clientWidth / container.clientHeight,
 1000
 );
 
-camera.position.set(0, 2, 15);
+camera.position.set(0,2,15);
 
 const renderer = new THREE.WebGLRenderer({
 antialias:true
@@ -32,39 +32,26 @@ light.position.set(5,5,5);
 scene.add(light);
 
 // Loader
+const loader = new THREE.GLTFLoader();
+
+let plane;
+
 loader.load(
 
 "Plane.glb",
 
 function(gltf){
 
-console.log(gltf);
-
 plane = gltf.scene;
 
-scene.add(plane);
-
-},
-
-undefined,
-
-function(error){
-
-console.error(error);
-
-}
-
-);
-
-// Calculate model size
+// Center model
 const box = new THREE.Box3().setFromObject(plane);
-const size = box.getSize(new THREE.Vector3());
 const center = box.getCenter(new THREE.Vector3());
 
-// Center the model
 plane.position.sub(center);
 
-// Scale automatically
+// Scale model
+const size = box.getSize(new THREE.Vector3());
 const maxAxis = Math.max(size.x,size.y,size.z);
 
 const scale = 5/maxAxis;
@@ -72,8 +59,6 @@ const scale = 5/maxAxis;
 plane.scale.setScalar(scale);
 
 scene.add(plane);
-
-camera.lookAt(0,0,0);
 
 console.log("Plane Loaded");
 
@@ -105,3 +90,17 @@ renderer.render(scene,camera);
 }
 
 animate();
+
+window.addEventListener("resize",()=>{
+
+camera.aspect =
+container.clientWidth/container.clientHeight;
+
+camera.updateProjectionMatrix();
+
+renderer.setSize(
+container.clientWidth,
+container.clientHeight
+);
+
+});
