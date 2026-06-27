@@ -303,3 +303,24 @@ progressBar.style.width=
 progress+"%";
 
 });
+
+// CURSOR GLOW
+
+const glow =
+document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove",(e)=>{
+
+gsap.to(glow,{
+
+x:e.clientX,
+
+y:e.clientY,
+
+duration:0.3,
+
+ease:"power2.out"
+
+});
+
+});
