@@ -1,99 +1,84 @@
 ✈️ AeroVision 3D
 
-🚀 Interactive Aviation Learning Platform
+Interactive Aviation Learning Platform
 
-A modern educational web application that combines 3D visualization, interactive learning, real-time animations, and modern frontend technologies to explain aviation and aerospace engineering concepts.
+Explore • Learn • Visualize • Experience Aviation Like Never Before
 
 ⸻
 
 📖 Table of Contents
 
-* Overview
-* Features
-* Technologies Used
-* Project Structure
-* AI Assistance
-* Future Roadmap
-* Installation
-* Screenshots
-* License
-* Developer
+* 🌍 Overview
+* ✨ Features
+* 🛠 Technologies Used
+* 📂 Project Structure
+* 🤖 AI Assistance
+* 🚀 Installation
+* 🗺 Future Roadmap
+* 👨‍💻 Developer
+* 📄 License
 
 ⸻
 
 🌍 Overview
 
-AeroVision 3D is an interactive aviation learning platform built to make complex aircraft engineering concepts easier to understand through immersive visual experiences.
+AeroVision 3D is a modern interactive aviation learning platform that combines 3D visualization, smooth animations, and educational content to help users understand aircraft systems and aerospace engineering concepts.
 
-Rather than presenting static information, AeroVision combines animations, interactive aircraft systems, modern UI design, and 3D visualization to create a learning experience that is engaging, educational, and visually appealing.
+Unlike traditional learning platforms, AeroVision transforms complex aviation topics into an engaging experience using interactive diagrams, real-time 3D models, modern UI/UX principles, and professional frontend development technologies.
 
-The project demonstrates advanced frontend development techniques while introducing users to modern aircraft systems, aerodynamics, and aviation principles.
+This project demonstrates advanced frontend development while making aviation education more interactive, accessible, and visually appealing.
 
 ⸻
 
-✨ Key Features
+✨ Features
 
 🛫 Interactive Landing Page
 
-* Modern Hero Section
+* Responsive Hero Section
 * Glassmorphism UI
-* Responsive Design
-* Smooth Scroll Navigation
-* Professional Animations
-* Aviation-inspired Theme
+* Aviation-inspired Design
+* Animated Hero Entrance
+* Modern Responsive Layout
 
 ⸻
 
-✈ Aircraft Explorer
+✈ Aircraft Information
 
-Explore important aircraft specifications including:
-
-* Range
+* Boeing 787 Dreamliner Overview
+* Aircraft Specifications
+* Manufacturer Details
 * Cruise Speed
-* Manufacturer
-* Aircraft Type
-* Engineering Overview
+* Flight Range
 
 ⸻
 
-⚙ Aircraft Systems
+⚙ Interactive Aircraft Systems
 
-Interactive cards explaining:
+Explore important aircraft components including:
 
-* Wings
-* Engines
-* Cockpit
-* Rudder
-* Landing Gear
-* Aerodynamics
+* 🪽 Wings
+* ⚙ Engines
+* 🎛 Cockpit
+* 🧭 Rudder
+* 🛞 Landing Gear
+* 🛫 Aerodynamics
 
-Each section opens a detailed popup containing educational information.
-
-⸻
-
-🌍 Interactive Aircraft Diagram
-
-Clickable aircraft hotspots provide instant explanations of major aircraft components.
+Each system opens an interactive popup containing educational information.
 
 ⸻
 
-🛩 3D Aircraft Viewer
+🖼 Interactive Aircraft Explorer
 
-Built using Three.js
-
-Features include:
-
-* Interactive 3D Model
-* Orbit Controls
-* Smooth Rotation
-* Responsive Rendering
-* Real-time Graphics
+* Clickable Aircraft Diagram
+* Interactive Hotspots
+* Educational Explanations
+* Visual Learning Experience
 
 ⸻
 
-📚 Principles of Flight
+🌍 Principles of Flight
 
-Learn the four aerodynamic forces:
+Learn about the four forces of flight:
 
 * Lift
 * Weight
@@ -104,23 +89,36 @@ Learn the four aerodynamic forces:
 
 📊 Animated Dashboard
 
-Includes:
-
 * Animated Statistics
-* Scroll-triggered Effects
 * Interactive Counters
+* Scroll-triggered Animations
+
+⸻
+
+🛩 3D Aircraft Viewer
+
+Powered by Three.js
+
+Features:
+
+* GLB Aircraft Model
+* Orbit Controls
+* Auto Rotation
+* Responsive Canvas
+* Real-time Rendering
 
 ⸻
 
 🎨 Modern User Experience
 
 * GSAP Animations
+* ScrollTrigger Effects
 * Lenis Smooth Scrolling
-* Hero Intro Animation
+* Hero Entrance Animation
 * Mouse Parallax
-* Progress Indicator
-* Glassmorphism Design
-* Responsive Layout
+* Scroll Progress Bar
+* Responsive Design
+* Glassmorphism
 
 ⸻
 
@@ -141,12 +139,14 @@ Libraries
 * ScrollTrigger
 * Lenis
 
-Design
+Concepts
 
+* Responsive Web Design
 * CSS Grid
 * Flexbox
 * Glassmorphism
-* Responsive UI
+* 3D Graphics
+* Interactive UI
 * Modern Animations
 
 ⸻
@@ -159,27 +159,19 @@ AeroVision-3D/
 ├── style.css
 ├── script.js
 ├── viewer.js
+│
 ├── Plane.glb
 ├── Boing 787.jpg
+│
 ├── README.md
+│
 └── assets/
 
 ⸻
 
 🤖 AI Assistance
 
-Artificial Intelligence tools were used throughout the development process to improve productivity and accelerate learning.
-
-AI was used for:
-
-* Brainstorming features and UI ideas
-* Debugging JavaScript and Three.js issues
-* Understanding library documentation
-* Optimizing animations
-* Improving code structure
-* Refining UI/UX concepts
-* Generating documentation drafts
-* Learning modern frontend development practices
+Artificial Intelligence tools were used throughout the development process to improve productivity, accelerate learning, and assist with debugging and design decisions.
 
 AI Tools Used
 
@@ -188,37 +180,51 @@ AI Tools Used
 * Anthropic Claude
 * Perplexity AI
 
-All project architecture, feature selection, integration, testing, debugging decisions, customization, and final implementation were completed and validated by the developer.
+AI Assisted With
+
+* Feature Brainstorming
+* UI/UX Ideas
+* Code Review
+* JavaScript Debugging
+* Three.js Guidance
+* Animation Optimization
+* Documentation Drafting
+* Learning Modern Frontend Practices
+
+All project architecture, feature selection, implementation, customization, integration, debugging, testing, and final development decisions were completed by the developer.
+
+⸻
+
+🚀 Installation
+
+Clone the repository
+
+git clone https://github.com/YOUR_USERNAME/AeroVision-3D.git
+
+Open the project folder.
+
+Run using VS Code Live Server or any local web server.
+
+Enjoy exploring AeroVision 3D!
 
 ⸻
 
 🗺 Future Roadmap
 
-Planned improvements include:
-
-* Knowledge Center
-* Aircraft Encyclopedia
-* Multiple Aircraft Models
-* Airport Database
-* Flight Timeline
-* Interactive 3D Hotspots
-* Aircraft Comparison Tool
-* Dark / Light Theme
-* Search Functionality
-* Real-time Flight APIs
-* Aircraft Performance Dashboard
-
-⸻
-
-⚙ Installation
-
-1. Clone the repository
-
-git clone https://github.com/yourusername/AeroVision-3D.git
-
-2. Open the project folder.
-3. Launch using a local server (such as VS Code Live Server).
-4. Explore AeroVision 3D.
+* ✅ Interactive Landing Page
+* ✅ Aircraft Information
+* ✅ Aircraft Systems Explorer
+* ✅ Interactive Popups
+* ✅ Three.js 3D Viewer
+* ✅ GSAP Animations
+* ✅ Lenis Smooth Scroll
+* ⏳ Knowledge Center
+* ⏳ Aircraft Encyclopedia
+* ⏳ Aircraft Comparison Tool
+* ⏳ Airport Database
+* ⏳ Flight Simulator Dashboard
+* ⏳ Multiple Aircraft Models
+* ⏳ Search Functionality
 
 ⸻
 
@@ -226,24 +232,17 @@ git clone https://github.com/yourusername/AeroVision-3D.git
 
 Version: v1.0
 
-Status: Active Development
-
-Current completion includes:
-
-* Interactive Landing Page
-* Aircraft Systems
-* GSAP Animations
-* Lenis Smooth Scroll
-* Three.js Aircraft Viewer
-* Interactive Popups
-* Responsive Design
-* Modern UI
+Status: 🚧 Active Development
 
 ⸻
 
-📄 License
+🎯 Project Goals
 
-This project is intended for educational, learning, and portfolio purposes.
+* Make aviation learning interactive
+* Demonstrate modern frontend development
+* Showcase 3D web technologies
+* Build an educational platform for students and aviation enthusiasts
+* Create a professional portfolio project
 
 ⸻
 
@@ -253,7 +252,7 @@ Ehsaas
 
 Computer Science (Artificial Intelligence & Machine Learning)
 
-Interested in:
+Interests
 
 * Artificial Intelligence
 * Machine Learning
@@ -264,11 +263,17 @@ Interested in:
 
 ⸻
 
-⭐ Support
+🌟 Support
 
-If you found this project interesting, consider giving it a ⭐ on GitHub.
+If you enjoyed this project or found it useful, consider giving it a ⭐ Star on GitHub.
 
-Your support encourages further improvements and future educational technology projects.
+Your support helps motivate future improvements and new educational technology projects.
+
+⸻
+
+📄 License
+
+This project is intended for educational, learning, and portfolio purposes.
 
 ⸻
 
