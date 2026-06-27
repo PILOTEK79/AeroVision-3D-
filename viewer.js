@@ -70,6 +70,7 @@ function animate(){
         plane.rotation.y += 0.01;
     }
 
+   controls.update();
     renderer.render(scene,camera);
 
 }
