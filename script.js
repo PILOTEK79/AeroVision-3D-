@@ -199,7 +199,7 @@ gsap.utils.toArray(".card, .system-card, .stat-card").forEach((item) => {
 
             toggleActions: "play none none none",
 
-            markers: true
+            markers: fasle
 
         }
 
