@@ -19,20 +19,6 @@
 
 ---
 
-# 📸 Preview
-
-> Add screenshots here after deployment.
-
-| Home | 3D Viewer |
-|------|-----------|
-| *(Add Screenshot)* | *(Add Screenshot)* |
-
-| Aircraft Systems | Flight Principles |
-|------------------|------------------|
-| *(Add Screenshot)* | *(Add Screenshot)* |
-
----
-
 # 📖 Table of Contents
 
 - 🌍 Overview
