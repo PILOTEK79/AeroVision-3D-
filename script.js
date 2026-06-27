@@ -181,25 +181,23 @@ gsap.utils.toArray(".card, .system-card, .stat-card").forEach((item) => {
 
     gsap.from(item, {
 
-        opacity: 0,
+        opacity:0,
 
-        y: 120,
+        y:80,
 
-        scale: 0.8,
+        scale:0.9,
 
-        duration: 1,
+        duration:1,
 
-        ease: "power3.out",
+        ease:"power3.out",
 
-        scrollTrigger: {
+        scrollTrigger:{
 
-            trigger: item,
+            trigger:item,
 
-            start: "top 90%",
+            start:"top 85%",
 
-            toggleActions: "play none none none",
-
-            markers: fasle
+            toggleActions:"play none none none"
 
         }
 
