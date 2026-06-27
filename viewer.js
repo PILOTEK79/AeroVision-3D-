@@ -44,13 +44,26 @@ function(gltf){
 
 plane = gltf.scene;
 
-// Make the model a good size
-plane.scale.set(2,2,2);
+// Calculate model size
+const box = new THREE.Box3().setFromObject(plane);
+const size = box.getSize(new THREE.Vector3());
+const center = box.getCenter(new THREE.Vector3());
 
-// Center it
-plane.position.set(0,0,0);
+// Center the model
+plane.position.sub(center);
+
+// Scale automatically
+const maxAxis = Math.max(size.x,size.y,size.z);
+
+const scale = 5/maxAxis;
+
+plane.scale.setScalar(scale);
 
 scene.add(plane);
+
+camera.lookAt(0,0,0);
+
+console.log("Plane Loaded");
 
 },
 
