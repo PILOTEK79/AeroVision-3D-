@@ -1,3 +1,5 @@
+console.log("Viewer.js loaded");
+
 const container = document.getElementById("aircraft-viewer");
 
 const scene = new THREE.Scene();
@@ -10,10 +12,10 @@ container.clientWidth / container.clientHeight,
 1000
 );
 
-camera.position.set(0,2,15);
+camera.position.set(0, 1, 5);
 
 const renderer = new THREE.WebGLRenderer({
-antialias:true
+antialias: true
 });
 
 renderer.setSize(
@@ -21,13 +23,14 @@ container.clientWidth,
 container.clientHeight
 );
 
+renderer.setPixelRatio(window.devicePixelRatio);
+
 container.appendChild(renderer.domElement);
 
 // Lights
-const ambient = new THREE.AmbientLight(0xffffff,2);
-scene.add(ambient);
+scene.add(new THREE.AmbientLight(0xffffff, 3));
 
-const light = new THREE.DirectionalLight(0xffffff,3);
+const light = new THREE.DirectionalLight(0xffffff, 4);
 light.position.set(5,5,5);
 scene.add(light);
 
@@ -42,25 +45,23 @@ loader.load(
 
 function(gltf){
 
+console.log("Model Loaded!");
+
 plane = gltf.scene;
 
-// Center model
+// Auto-center
 const box = new THREE.Box3().setFromObject(plane);
 const center = box.getCenter(new THREE.Vector3());
-
 plane.position.sub(center);
 
-// Scale model
+// Auto-scale
 const size = box.getSize(new THREE.Vector3());
-const maxAxis = Math.max(size.x,size.y,size.z);
+const maxSize = Math.max(size.x,size.y,size.z);
 
-const scale = 5/maxAxis;
-
+const scale = 2.5/maxSize;
 plane.scale.setScalar(scale);
 
 scene.add(plane);
-
-console.log("Plane Loaded");
 
 },
 
@@ -68,20 +69,19 @@ undefined,
 
 function(error){
 
-console.error(error);
+console.error("Loading Error:",error);
 
 }
 
 );
 
-// Animation
 function animate(){
 
 requestAnimationFrame(animate);
 
 if(plane){
 
-plane.rotation.y += 0.005;
+plane.rotation.y += 0.01;
 
 }
 
@@ -100,7 +100,6 @@ camera.updateProjectionMatrix();
 
 renderer.setSize(
 container.clientWidth,
-container.clientHeight
-);
+container.clientHeight);
 
 });
