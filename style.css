@@ -24,10 +24,29 @@ overflow-x:hidden;
 /* NAVBAR */
 
 nav{
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:20px 8%;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
-padding:25px 8%;
+
+background:rgba(2,6,23,.65);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:10000;
 }
 
 .logo{
