@@ -49,6 +49,19 @@ loader.load("./Plane.glb", function(gltf){
 
 camera.position.set(0,2,8);
 
+const controls = new THREE.OrbitControls(
+camera,
+renderer.domElement
+);
+
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+
+controls.enablePan = false;
+
+controls.autoRotate = true;
+controls.autoRotateSpeed = 1;
+
 function animate(){
 
     requestAnimationFrame(animate);
