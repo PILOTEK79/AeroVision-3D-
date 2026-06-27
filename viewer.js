@@ -67,7 +67,7 @@ function animate(){
     requestAnimationFrame(animate);
 
     if(plane){
-        plane.rotation.y += 0.01;
+        plane.rotation.y += 0.002;
     }
 
    controls.update();
