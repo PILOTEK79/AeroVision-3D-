@@ -226,3 +226,42 @@ function raf(time){
 }
 
 requestAnimationFrame(raf);
+
+// HERO INTRO ANIMATION
+
+const heroTimeline = gsap.timeline();
+
+heroTimeline
+
+.from(".badge",{
+    y:-40,
+    opacity:0,
+    duration:0.8,
+    ease:"power3.out"
+})
+
+.from(".hero h1",{
+    x:-100,
+    opacity:0,
+    duration:1,
+    ease:"power3.out"
+},"-=0.4")
+
+.from(".hero p",{
+    y:40,
+    opacity:0,
+    duration:0.8
+},"-=0.5")
+
+.from(".hero-buttons",{
+    y:40,
+    opacity:0,
+    duration:0.8
+},"-=0.4")
+
+.from(".hero-aircraft",{
+    x:200,
+    opacity:0,
+    duration:1.2,
+    ease:"power3.out"
+},"-=0.8");
