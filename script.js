@@ -265,3 +265,19 @@ heroTimeline
     duration:1.2,
     ease:"power3.out"
 },"-=0.8");
+
+const aircraft = document.querySelector(".hero-aircraft");
+
+document.addEventListener("mousemove",(e)=>{
+
+const x = (e.clientX/window.innerWidth - 0.5) * 20;
+const y = (e.clientY/window.innerHeight - 0.5) * 20;
+
+gsap.to(aircraft,{
+    x:x,
+    y:y,
+    duration:1,
+    ease:"power2.out"
+});
+
+});
