@@ -1,7 +1,6 @@
 const container = document.getElementById("aircraft-viewer");
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x000000);
 
 const camera = new THREE.PerspectiveCamera(
 45,
@@ -10,71 +9,89 @@ container.clientWidth / container.clientHeight,
 1000
 );
 
+camera.position.set(0,2,8);
+
 const renderer = new THREE.WebGLRenderer({
-    antialias: true
+antialias:true,
+alpha:true
 });
+
+renderer.setSize(
+container.clientWidth,
+container.clientHeight
+);
 
 renderer.setPixelRatio(window.devicePixelRatio);
 
-renderer.setSize(
-    container.clientWidth,
-    container.clientHeight
-);
-
 container.appendChild(renderer.domElement);
 
-// Cube (temporary aircraft)
-const geometry = new THREE.BoxGeometry(3,1,1);
+// Lighting
 
-const material = new THREE.MeshStandardMaterial({
-    color:0x38bdf8,
-    metalness:0.7,
-    roughness:0.2
-});
+scene.add(new THREE.AmbientLight(0xffffff,2));
 
-const aircraft = new THREE.Mesh(
-    geometry,
-    material
-);
-
-scene.add(aircraft);
-
-// Lights
 const light = new THREE.DirectionalLight(0xffffff,3);
+
 light.position.set(5,5,5);
+
 scene.add(light);
 
-const ambient = new THREE.AmbientLight(0xffffff,1);
-scene.add(ambient);
+// Load Model
 
-camera.position.z = 7;
+const loader = new THREE.GLTFLoader();
 
-// Animation
+let plane;
+
+loader.load(
+
+"Plane.glb",
+
+function(gltf){
+
+plane = gltf.scene;
+
+plane.scale.set(1,1,1);
+
+scene.add(plane);
+
+},
+
+undefined,
+
+function(error){
+
+console.log(error);
+
+}
+
+);
+
 function animate(){
 
-    requestAnimationFrame(animate);
+requestAnimationFrame(animate);
 
-    aircraft.rotation.x += 0.003;
-    aircraft.rotation.y += 0.01;
+if(plane){
 
-    renderer.render(scene,camera);
+plane.rotation.y += 0.003;
+
+}
+
+renderer.render(scene,camera);
 
 }
 
 animate();
 
-// Resize
 window.addEventListener("resize",()=>{
 
-    camera.aspect =
-        container.clientWidth /
-        container.clientHeight;
+camera.aspect =
+container.clientWidth /
+container.clientHeight;
 
-    camera.updateProjectionMatrix();
+camera.updateProjectionMatrix();
 
-    renderer.setSize(
-        container.clientWidth,
-        container.clientHeight
-    );
+renderer.setSize(
+container.clientWidth,
+container.clientHeight
+);
 
 });
