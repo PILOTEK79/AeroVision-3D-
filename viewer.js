@@ -32,30 +32,29 @@ light.position.set(5,5,5);
 scene.add(light);
 
 // Loader
-const loader = new THREE.GLTFLoader();
+loader.load(
 
-loader.load("Plane.glb", function(gltf){
+"Plane.glb",
 
-    plane = gltf.scene;
+function(gltf){
 
-    const box = new THREE.Box3().setFromObject(plane);
-    const center = box.getCenter(new THREE.Vector3());
+console.log(gltf);
 
-    plane.position.sub(center);
+plane = gltf.scene;
 
-    const size = box.getSize(new THREE.Vector3());
-    const maxDim = Math.max(size.x, size.y, size.z);
+scene.add(plane);
 
-    const scale = 6 / maxDim;
-    plane.scale.setScalar(scale);
+},
 
-    scene.add(plane);
+undefined,
 
-}, undefined, function(error){
+function(error){
 
-    console.error("Model failed to load:", error);
+console.error(error);
 
-});
+}
+
+);
 
 // Calculate model size
 const box = new THREE.Box3().setFromObject(plane);
