@@ -174,3 +174,27 @@ target.toLocaleString();
 updateCounter();
 
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".card").forEach(card=>{
+
+gsap.from(card,{
+
+y:80,
+
+opacity:0,
+
+duration:1,
+
+scrollTrigger:{
+
+trigger:card,
+
+start:"top 80%"
+
+}
+
+});
+
+});
