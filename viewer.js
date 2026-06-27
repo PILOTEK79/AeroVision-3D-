@@ -10,7 +10,7 @@ container.clientWidth / container.clientHeight,
 1000
 );
 
-camera.position.set(0, 2, 8);
+camera.position.set(0, 2, 15);
 
 const renderer = new THREE.WebGLRenderer({
 antialias:true
