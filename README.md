@@ -1,67 +1,64 @@
 ✈️ AeroVision 3D
 
-<p align="center">
+🚀 Interactive Aviation Learning Platform
 
-Interactive Aviation Learning Platform
+A modern educational web application that combines 3D visualization, interactive learning, real-time animations, and modern frontend technologies to explain aviation and aerospace engineering concepts.
 
-Explore • Learn • Visualize • Experience
+⸻
 
-Modern web technologies meet aerospace engineering to create an immersive educational experience.
+📖 Table of Contents
 
-</p>
+* Overview
+* Features
+* Technologies Used
+* Project Structure
+* AI Assistance
+* Future Roadmap
+* Installation
+* Screenshots
+* License
+* Developer
 
 ⸻
 
 🌍 Overview
 
-AeroVision 3D is an interactive aviation education platform designed to help students, aviation enthusiasts, and aspiring aerospace engineers understand the science and engineering behind modern aircraft.
+AeroVision 3D is an interactive aviation learning platform built to make complex aircraft engineering concepts easier to understand through immersive visual experiences.
 
-Instead of reading static textbook content, users can interact with aircraft systems, visualize engineering concepts, explore aviation principles, and experience real-time 3D aircraft models through a modern and responsive web interface.
+Rather than presenting static information, AeroVision combines animations, interactive aircraft systems, modern UI design, and 3D visualization to create a learning experience that is engaging, educational, and visually appealing.
 
-The project combines immersive UI design, smooth animations, interactive components, and 3D visualization to create a professional educational platform inspired by modern technology websites.
-
-⸻
-
-🎯 Project Goals
-
-The primary objectives of AeroVision 3D are to:
-
-* Make aviation concepts easier to understand
-* Provide an interactive alternative to traditional learning
-* Demonstrate advanced frontend web development
-* Showcase modern UI/UX design techniques
-* Build a professional portfolio project using JavaScript and Three.js
+The project demonstrates advanced frontend development techniques while introducing users to modern aircraft systems, aerodynamics, and aviation principles.
 
 ⸻
 
-✨ Features
+✨ Key Features
 
-🛫 Modern Landing Page
+🛫 Interactive Landing Page
 
-* Responsive Hero Section
-* Aviation-inspired UI
-* Modern glassmorphism design
-* Smooth transitions
-* Interactive navigation
-* Professional animations
+* Modern Hero Section
+* Glassmorphism UI
+* Responsive Design
+* Smooth Scroll Navigation
+* Professional Animations
+* Aviation-inspired Theme
 
 ⸻
 
-✈ Aircraft Information
+✈ Aircraft Explorer
 
-Explore important information about modern aircraft including:
+Explore important aircraft specifications including:
 
-* Aircraft Range
+* Range
 * Cruise Speed
 * Manufacturer
 * Aircraft Type
-* General Specifications
+* Engineering Overview
 
 ⸻
 
-⚙ Interactive Aircraft Systems
+⚙ Aircraft Systems
 
-Click on aircraft components to learn about:
+Interactive cards explaining:
 
 * Wings
 * Engines
@@ -70,93 +67,66 @@ Click on aircraft components to learn about:
 * Landing Gear
 * Aerodynamics
 
-Each section opens an interactive popup explaining the engineering principles behind the selected component.
+Each section opens a detailed popup containing educational information.
 
 ⸻
 
-🖼 Interactive Aircraft Explorer
+🌍 Interactive Aircraft Diagram
 
-An image-based exploration system allowing users to click different areas of the aircraft and instantly view detailed explanations.
+Clickable aircraft hotspots provide instant explanations of major aircraft components.
+
+⸻
+
+🛩 3D Aircraft Viewer
+
+Built using Three.js
+
+Features include:
+
+* Interactive 3D Model
+* Orbit Controls
+* Smooth Rotation
+* Responsive Rendering
+* Real-time Graphics
 
 ⸻
 
 📚 Principles of Flight
 
-Learn the four fundamental aerodynamic forces:
+Learn the four aerodynamic forces:
 
 * Lift
 * Weight
 * Thrust
 * Drag
 
-Each principle is presented in a modern card layout.
+⸻
+
+📊 Animated Dashboard
+
+Includes:
+
+* Animated Statistics
+* Scroll-triggered Effects
+* Interactive Counters
 
 ⸻
 
-📊 Animated Statistics
+🎨 Modern User Experience
 
-Interactive counters displaying aviation-related statistics.
-
-Examples include:
-
-* Aircraft Studied
-* Airports Covered
-* Flights Simulated
-* Aircraft Systems
-
-⸻
-
-🌐 3D Aircraft Viewer
-
-Powered by Three.js
-
-Features include:
-
-* Interactive 3D Aircraft Model
-* Orbit Controls
-* Smooth Camera Movement
-* Auto Rotation
-* Real-time Rendering
-* Responsive Canvas
-
-⸻
-
-🎨 Modern User Interface
-
-* Glassmorphism
-* Soft Shadows
-* Responsive Grid Layouts
-* Professional Color Palette
-* Modern Buttons
-* Floating Aircraft Animation
-
-⸻
-
-⚡ Smooth User Experience
-
-* Lenis Smooth Scrolling
 * GSAP Animations
-* ScrollTrigger Effects
-* Hero Entrance Animation
-* Hover Effects
-* Progress Bar
+* Lenis Smooth Scrolling
+* Hero Intro Animation
+* Mouse Parallax
+* Progress Indicator
+* Glassmorphism Design
+* Responsive Layout
 
 ⸻
 
-📱 Responsive Design
+🛠 Technologies Used
 
-Optimized for:
-
-* Desktop
-* Laptop
-* Tablet
-* Mobile Devices
-
-⸻
-
-🚀 Technologies Used
-
-Frontend
+Languages
 
 * HTML5
 * CSS3
@@ -171,14 +141,13 @@ Libraries
 * ScrollTrigger
 * Lenis
 
-Design Concepts
+Design
 
-* Glassmorphism
-* Responsive Design
 * CSS Grid
 * Flexbox
-* Modern UI/UX
-* Interactive Animations
+* Glassmorphism
+* Responsive UI
+* Modern Animations
 
 ⸻
 
@@ -190,173 +159,91 @@ AeroVision-3D/
 ├── style.css
 ├── script.js
 ├── viewer.js
-│
 ├── Plane.glb
 ├── Boing 787.jpg
-│
 ├── README.md
-│
 └── assets/
 
 ⸻
 
-🧠 Learning Objectives
+🤖 AI Assistance
 
-This project demonstrates knowledge of:
+Artificial Intelligence tools were used throughout the development process to improve productivity and accelerate learning.
 
-* Responsive Web Design
-* DOM Manipulation
-* Event Handling
-* Animation Libraries
-* 3D Graphics
-* Modern JavaScript
-* UI/UX Design
-* Frontend Architecture
+AI was used for:
 
-⸻
+* Brainstorming features and UI ideas
+* Debugging JavaScript and Three.js issues
+* Understanding library documentation
+* Optimizing animations
+* Improving code structure
+* Refining UI/UX concepts
+* Generating documentation drafts
+* Learning modern frontend development practices
 
-💡 Future Improvements
+AI Tools Used
 
-The project roadmap includes:
+* ChatGPT
+* Google Gemini
+* Anthropic Claude
+* Perplexity AI
 
-📖 Knowledge Center
-
-A dedicated aviation encyclopedia featuring:
-
-* Aircraft Types
-* Aircraft Systems
-* Flight Instruments
-* Airport Operations
-* Aviation History
-* Aerospace Engineering Concepts
+All project architecture, feature selection, integration, testing, debugging decisions, customization, and final implementation were completed and validated by the developer.
 
 ⸻
 
-🌍 Aircraft Encyclopedia
+🗺 Future Roadmap
 
-Support for additional aircraft including:
+Planned improvements include:
 
-* Boeing 737
-* Boeing 747
-* Boeing 777
-* Boeing 787
-* Airbus A320
-* Airbus A350
-* Airbus A380
-* Concorde
-* Lockheed SR-71
-* F-22 Raptor
-
-⸻
-
-🎮 Advanced 3D Features
-
-* Clickable Aircraft Parts
-* Camera Fly-through
-* Aircraft Exploded View
-* Interactive Labels
-* Section Highlighting
+* Knowledge Center
+* Aircraft Encyclopedia
 * Multiple Aircraft Models
+* Airport Database
+* Flight Timeline
+* Interactive 3D Hotspots
+* Aircraft Comparison Tool
+* Dark / Light Theme
+* Search Functionality
+* Real-time Flight APIs
+* Aircraft Performance Dashboard
 
 ⸻
 
-🌤 Flight Simulation
+⚙ Installation
 
-Planned additions include:
+1. Clone the repository
 
-* Cockpit Dashboard
-* Artificial Horizon
-* Flight Instruments
-* Altitude Indicator
-* Airspeed Indicator
-* Weather Simulation
+git clone https://github.com/yourusername/AeroVision-3D.git
 
-⸻
-
-📊 Aviation Dashboard
-
-Future analytics:
-
-* Live Flight Statistics
-* Aircraft Performance
-* Fuel Efficiency
-* Engine Data
-* Flight Routes
-
-⸻
-
-🎨 Design Inspiration
-
-This project is inspired by the clean and immersive design philosophies used by modern technology and aerospace companies.
-
-Focus areas include:
-
-* Minimalism
-* Smooth Motion
-* High Performance
-* Modern Typography
-* Interactive Experiences
-* Educational Visualization
-
-⸻
-
-🎯 Target Audience
-
-AeroVision 3D is intended for:
-
-* Students
-* Aviation Enthusiasts
-* Aerospace Engineering Students
-* Web Developers
-* UI/UX Designers
-* Portfolio Reviewers
-* Technology Enthusiasts
-
-⸻
-
-🌟 Why This Project?
-
-Traditional aviation learning often relies on static diagrams and lengthy explanations.
-
-AeroVision 3D transforms those concepts into an engaging interactive experience through modern web technologies, making complex engineering topics easier to understand and more enjoyable to explore.
+2. Open the project folder.
+3. Launch using a local server (such as VS Code Live Server).
+4. Explore AeroVision 3D.
 
 ⸻
 
 📈 Current Status
 
-Version
+Version: v1.0
 
-v1.0
+Status: Active Development
 
-Current Features:
+Current completion includes:
 
 * Interactive Landing Page
-* Aircraft Information
-* Aircraft Systems Explorer
-* Animated Statistics
-* Flight Principles
+* Aircraft Systems
 * GSAP Animations
-* Lenis Smooth Scrolling
-* Three.js 3D Viewer
+* Lenis Smooth Scroll
+* Three.js Aircraft Viewer
+* Interactive Popups
 * Responsive Design
-
-Project Status:
-
-Actively Under Development
-
-⸻
-
-🤝 Contributing
-
-Suggestions, feedback, and improvements are always welcome.
-
-If you have ideas for additional aircraft, aviation systems, or educational features, feel free to contribute or open an issue.
+* Modern UI
 
 ⸻
 
 📄 License
 
-This project is available for educational and portfolio purposes.
+This project is intended for educational, learning, and portfolio purposes.
 
 ⸻
 
@@ -364,16 +251,16 @@ This project is available for educational and portfolio purposes.
 
 Ehsaas
 
-Computer Science (AI & Machine Learning) Student
+Computer Science (Artificial Intelligence & Machine Learning)
 
-Passionate about:
+Interested in:
 
 * Artificial Intelligence
 * Machine Learning
-* Aerospace Technology
-* Web Development
+* Aerospace Engineering
+* Frontend Development
 * UI/UX Design
-* Interactive Learning Platforms
+* Interactive Educational Platforms
 
 ⸻
 
@@ -381,10 +268,10 @@ Passionate about:
 
 If you found this project interesting, consider giving it a ⭐ on GitHub.
 
-Your support motivates future improvements and the development of more interactive educational projects.
+Your support encourages further improvements and future educational technology projects.
 
 ⸻
 
-✈️ AeroVision 3D
+✈ AeroVision 3D
 
 “Where Aviation Meets Interactive Technology.”
