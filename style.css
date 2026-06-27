@@ -622,3 +622,30 @@ margin-top:40px;
 
 box-shadow:0 0 50px rgba(56,189,248,.3);
 }
+
+/* SCROLL PROGRESS BAR */
+
+#progress-bar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+height:4px;
+
+width:0%;
+
+background:linear-gradient(
+90deg,
+#38bdf8,
+#0ea5e9
+);
+
+z-index:99999;
+
+box-shadow:
+0 0 20px #38bdf8;
+
+transition:width .1s;
+}
