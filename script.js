@@ -177,24 +177,13 @@ updateCounter();
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray(".card").forEach(card=>{
-
-gsap.from(card,{
-
-y:80,
-
-opacity:0,
-
-duration:1,
-
-scrollTrigger:{
-
-trigger:card,
-
-start:"top 80%"
-
-}
-
-});
-
+gsap.from(".card", {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+        trigger: ".aircraft-info",
+        start: "top 80%"
+    }
 });
