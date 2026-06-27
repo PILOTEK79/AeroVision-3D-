@@ -1,75 +1,85 @@
-console.log("Viewer.js loaded");
+console.log("Viewer Started");
 
 const container = document.getElementById("aircraft-viewer");
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x000000);
+scene.background = new THREE.Color(0x111111);
 
 const camera = new THREE.PerspectiveCamera(
 45,
 container.clientWidth / container.clientHeight,
 0.1,
-1000
+5000
 );
 
-camera.position.set(0, 1, 5);
-
 const renderer = new THREE.WebGLRenderer({
-antialias: true
+antialias:true
 });
 
+renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(
 container.clientWidth,
 container.clientHeight
 );
 
-renderer.setPixelRatio(window.devicePixelRatio);
-
 container.appendChild(renderer.domElement);
 
-// Lights
-scene.add(new THREE.AmbientLight(0xffffff, 3));
+// LIGHTS
+scene.add(new THREE.AmbientLight(0xffffff,3));
 
-const light = new THREE.DirectionalLight(0xffffff, 4);
-light.position.set(5,5,5);
+const light=new THREE.DirectionalLight(0xffffff,5);
+light.position.set(200,300,200);
 scene.add(light);
 
-// Loader
-const loader = new THREE.GLTFLoader();
+// GRID (helps us know where the model is)
+const grid=new THREE.GridHelper(500,50);
+scene.add(grid);
 
-let plane;
+// AXES
+scene.add(new THREE.AxesHelper(100));
+
+const loader=new THREE.GLTFLoader();
+
+let plane=null;
 
 loader.load(
 
 "Plane.glb",
 
-function(gltf){
+(gltf)=>{
 
-console.log("Model Loaded!");
+console.log("MODEL LOADED");
 
-plane = gltf.scene;
-
-// Auto-center
-const box = new THREE.Box3().setFromObject(plane);
-const center = box.getCenter(new THREE.Vector3());
-plane.position.sub(center);
-
-// Auto-scale
-const size = box.getSize(new THREE.Vector3());
-const maxSize = Math.max(size.x,size.y,size.z);
-
-const scale = 2.5/maxSize;
-plane.scale.setScalar(scale);
+plane=gltf.scene;
 
 scene.add(plane);
+
+// Find size
+const box=new THREE.Box3().setFromObject(plane);
+
+const center=box.getCenter(new THREE.Vector3());
+
+const size=box.getSize(new THREE.Vector3());
+
+plane.position.sub(center);
+
+const maxDim=Math.max(size.x,size.y,size.z);
+
+camera.position.set(
+maxDim,
+maxDim*0.6,
+maxDim*2
+);
+
+camera.lookAt(0,0,0);
 
 },
 
 undefined,
 
-function(error){
+(err)=>{
 
-console.error("Loading Error:",error);
+console.error(err);
 
 }
 
@@ -81,7 +91,7 @@ requestAnimationFrame(animate);
 
 if(plane){
 
-plane.rotation.y += 0.01;
+plane.rotation.y+=0.003;
 
 }
 
@@ -90,16 +100,3 @@ renderer.render(scene,camera);
 }
 
 animate();
-
-window.addEventListener("resize",()=>{
-
-camera.aspect =
-container.clientWidth/container.clientHeight;
-
-camera.updateProjectionMatrix();
-
-renderer.setSize(
-container.clientWidth,
-container.clientHeight);
-
-});
