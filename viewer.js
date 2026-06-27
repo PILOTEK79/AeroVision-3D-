@@ -1,6 +1,7 @@
 const container = document.getElementById("aircraft-viewer");
 
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x000000);
 
 const camera = new THREE.PerspectiveCamera(
 45,
@@ -9,11 +10,10 @@ container.clientWidth / container.clientHeight,
 1000
 );
 
-camera.position.set(0,2,8);
+camera.position.set(0, 2, 8);
 
 const renderer = new THREE.WebGLRenderer({
-antialias:true,
-alpha:true
+antialias:true
 });
 
 renderer.setSize(
@@ -21,22 +21,17 @@ container.clientWidth,
 container.clientHeight
 );
 
-renderer.setPixelRatio(window.devicePixelRatio);
-
 container.appendChild(renderer.domElement);
 
-// Lighting
-
-scene.add(new THREE.AmbientLight(0xffffff,2));
+// Lights
+const ambient = new THREE.AmbientLight(0xffffff,2);
+scene.add(ambient);
 
 const light = new THREE.DirectionalLight(0xffffff,3);
-
 light.position.set(5,5,5);
-
 scene.add(light);
 
-// Load Model
-
+// Loader
 const loader = new THREE.GLTFLoader();
 
 let plane;
@@ -49,7 +44,11 @@ function(gltf){
 
 plane = gltf.scene;
 
-plane.scale.set(1,1,1);
+// Make the model a good size
+plane.scale.set(2,2,2);
+
+// Center it
+plane.position.set(0,0,0);
 
 scene.add(plane);
 
@@ -59,19 +58,20 @@ undefined,
 
 function(error){
 
-console.log(error);
+console.error(error);
 
 }
 
 );
 
+// Animation
 function animate(){
 
 requestAnimationFrame(animate);
 
 if(plane){
 
-plane.rotation.y += 0.003;
+plane.rotation.y += 0.005;
 
 }
 
@@ -80,18 +80,3 @@ renderer.render(scene,camera);
 }
 
 animate();
-
-window.addEventListener("resize",()=>{
-
-camera.aspect =
-container.clientWidth /
-container.clientHeight;
-
-camera.updateProjectionMatrix();
-
-renderer.setSize(
-container.clientWidth,
-container.clientHeight
-);
-
-});
