@@ -1,9 +1,6 @@
-console.log("Viewer Started");
-
 const container = document.getElementById("aircraft-viewer");
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x111111);
 
 const camera = new THREE.PerspectiveCamera(
 45,
@@ -12,11 +9,8 @@ container.clientWidth / container.clientHeight,
 5000
 );
 
-const renderer = new THREE.WebGLRenderer({
-antialias:true
-});
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 
-renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(
 container.clientWidth,
 container.clientHeight
@@ -24,78 +18,46 @@ container.clientHeight
 
 container.appendChild(renderer.domElement);
 
-// LIGHTS
-scene.add(new THREE.AmbientLight(0xffffff,3));
+// Lights
+scene.add(new THREE.AmbientLight(0xffffff, 2));
 
-const light=new THREE.DirectionalLight(0xffffff,5);
-light.position.set(200,300,200);
+const light = new THREE.DirectionalLight(0xffffff, 3);
+light.position.set(100,100,100);
 scene.add(light);
 
-// GRID (helps us know where the model is)
-const grid=new THREE.GridHelper(500,50);
-scene.add(grid);
+// Loader
+const loader = new THREE.GLTFLoader();
 
-// AXES
-scene.add(new THREE.AxesHelper(100));
+let plane;
 
-const loader=new THREE.GLTFLoader();
+loader.load("./Plane.glb", function(gltf){
 
-let plane=null;
+    plane = gltf.scene;
 
-loader.load(
+    // The uploaded model is very large.
+    plane.scale.set(0.003,0.003,0.003);
 
-"Plane.glb",
+    plane.position.set(0,0,0);
 
-(gltf)=>{
+    scene.add(plane);
 
-console.log("MODEL LOADED");
+}, undefined, function(error){
 
-plane=gltf.scene;
+    console.error(error);
 
-scene.add(plane);
+});
 
-// Find size
-const box=new THREE.Box3().setFromObject(plane);
-
-const center=box.getCenter(new THREE.Vector3());
-
-const size=box.getSize(new THREE.Vector3());
-
-plane.position.sub(center);
-
-const maxDim=Math.max(size.x,size.y,size.z);
-
-camera.position.set(
-maxDim,
-maxDim*0.6,
-maxDim*2
-);
-
-camera.lookAt(0,0,0);
-
-},
-
-undefined,
-
-(err)=>{
-
-console.error(err);
-
-}
-
-);
+camera.position.set(0,2,8);
 
 function animate(){
 
-requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
 
-if(plane){
+    if(plane){
+        plane.rotation.y += 0.01;
+    }
 
-plane.rotation.y+=0.003;
-
-}
-
-renderer.render(scene,camera);
+    renderer.render(scene,camera);
 
 }
 
