@@ -88,11 +88,12 @@ align-items:center;
 
 gap:50px;
 
-padding:0 8%;
+padding:140px 8% 0;
 
 position:relative;
 
 overflow:hidden;
+
 }
 
 .hero::before{
