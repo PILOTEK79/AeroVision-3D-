@@ -24,6 +24,7 @@ overflow-x:hidden;
 /* NAVBAR */
 
 nav{
+
 position:fixed;
 
 top:0;
@@ -32,21 +33,24 @@ left:0;
 
 width:100%;
 
-padding:20px 8%;
-
 display:flex;
 
 justify-content:space-between;
 
 align-items:center;
 
-background:rgba(2,6,23,.65);
+padding:20px 8%;
 
-backdrop-filter:blur(18px);
+background:rgba(2,6,23,.75);
+
+backdrop-filter:blur(20px);
 
 border-bottom:1px solid rgba(255,255,255,.08);
 
-z-index:10000;
+z-index:9999;
+
+transition:.3s;
+
 }
 
 .logo{
