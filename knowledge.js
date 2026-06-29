@@ -217,3 +217,78 @@ ${a.facts.map(f=>`
 };
 
 });
+
+// ================= SEARCH =================
+
+const searchBox = document.getElementById("searchBox");
+
+searchBox.addEventListener("keyup", () => {
+
+const value = searchBox.value.toLowerCase();
+
+menu.forEach(item => {
+
+const text = item.innerText.toLowerCase();
+
+if(text.includes(value)){
+
+item.style.display="block";
+
+}else{
+
+item.style.display="none";
+
+}
+
+});
+
+});
+
+
+// ================= ANIMATION =================
+
+function animateContent(){
+
+content.animate(
+
+[
+
+{
+
+opacity:0,
+
+transform:"translateY(25px)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"translateY(0px)"
+
+}
+
+],
+
+{
+
+duration:500,
+
+easing:"ease"
+
+}
+
+);
+
+}
+
+menu.forEach(item=>{
+
+item.addEventListener("click",()=>{
+
+setTimeout(animateContent,50);
+
+});
+
+});
