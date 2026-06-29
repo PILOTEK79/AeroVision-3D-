@@ -4,139 +4,284 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AeroVision | Knowledge Center</title>
 
 <link rel="stylesheet" href="knowledge.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
 
 <div class="logo">
+
 ✈ AeroVision
+
 </div>
 
-<div class="nav-links">
-<a href="index.html">🏠 Home</a>
+<div class="nav-right">
+
+<input
+type="text"
+id="searchBox"
+placeholder="🔍 Search articles...">
+
+<a href="index.html" class="homeBtn">
+
+🏠 Home
+
+</a>
+
 </div>
 
 </nav>
 
-<div class="knowledge-layout">
+<div class="container">
+
+<!-- SIDEBAR -->
 
 <aside class="sidebar">
 
-<h2>📚 Knowledge Center</h2>
+<h2>
 
-<input
-type="text"
-placeholder="Search topics...">
+Knowledge Center
+
+</h2>
 
 <ul>
 
-<li class="active">✈ Aircraft</li>
+<li class="active" data-page="aircraft">
 
-<li>⚙ Aircraft Systems</li>
+✈ Aircraft
 
-<li>🛫 Flight Principles</li>
+</li>
 
-<li>📡 Navigation</li>
+<li data-page="systems">
 
-<li>🌦 Aviation Weather</li>
+⚙ Aircraft Systems
 
-<li>🛬 Airports</li>
+</li>
 
-<li>📖 Aviation History</li>
+<li data-page="flight">
 
-<li>🚀 Future Aviation</li>
+🛫 Flight Principles
+
+</li>
+
+<li data-page="navigation">
+
+📡 Navigation
+
+</li>
+
+<li data-page="weather">
+
+🌦 Weather
+
+</li>
+
+<li data-page="airports">
+
+🛬 Airports
+
+</li>
+
+<li data-page="history">
+
+📖 Aviation History
+
+</li>
+
+<li data-page="future">
+
+🚀 Future Aviation
+
+</li>
 
 </ul>
 
 </aside>
 
+<!-- MAIN CONTENT -->
+
 <main class="content">
 
-<h1>Boeing 787 Dreamliner</h1>
+<div id="content">
 
-<p>
+<span class="tag">
 
-The Boeing 787 Dreamliner is one of the world's most advanced passenger aircraft. It uses lightweight composite materials, efficient engines and modern avionics to improve performance and passenger comfort.
+BOEING AIRCRAFT
 
-</p>
+</span>
 
-<div class="spec-grid">
+<h1>
 
-<div class="spec-card">
-<h3>Range</h3>
-<p>14,140 km</p>
-</div>
+Boeing 787 Dreamliner
 
-<div class="spec-card">
-<h3>Speed</h3>
-<p>903 km/h</p>
-</div>
+</h1>
 
-<div class="spec-card">
-<h3>Passengers</h3>
-<p>242–335</p>
-</div>
+<p class="intro">
 
-<div class="spec-card">
-<h3>Manufacturer</h3>
-<p>Boeing</p>
-</div>
-
-</div>
-
-<h2>Overview</h2>
-
-<p>
-
-The Dreamliner introduced carbon-fiber composite structures, larger dimmable windows, lower cabin altitude and improved fuel efficiency, making it one of Boeing's most successful long-haul aircraft.
+The Boeing 787 Dreamliner is among the world's most advanced
+wide-body commercial aircraft. It combines lightweight
+carbon-fiber composites, highly efficient engines,
+digital avionics and advanced aerodynamics to provide
+better fuel efficiency and passenger comfort.
 
 </p>
 
-<h2>Interesting Facts</h2>
+<div class="stats">
+
+<div class="stat">
+
+<h3>14,140 km</h3>
+
+<p>Maximum Range</p>
+
+</div>
+
+<div class="stat">
+
+<h3>903 km/h</h3>
+
+<p>Cruise Speed</p>
+
+</div>
+
+<div class="stat">
+
+<h3>242–335</h3>
+
+<p>Passengers</p>
+
+</div>
+
+<div class="stat">
+
+<h3>50%</h3>
+
+<p>Composite Material</p>
+
+</div>
+
+</div>
+
+<h2>
+
+Overview
+
+</h2>
+
+<p>
+
+The Dreamliner introduced one of the largest technological
+advancements in commercial aviation by replacing aluminium
+with composite materials, reducing weight while increasing
+strength and efficiency.
+
+</p>
+
+<h2>
+
+Key Features
+
+</h2>
+
+<div class="featureGrid">
+
+<div class="featureCard">
+
+🪶 Lightweight Carbon Fiber
+
+</div>
+
+<div class="featureCard">
+
+⚙ Efficient Turbofan Engines
+
+</div>
+
+<div class="featureCard">
+
+🛫 Fly-By-Wire Controls
+
+</div>
+
+<div class="featureCard">
+
+🌍 Long Range Capability
+
+</div>
+
+<div class="featureCard">
+
+🪟 Larger Passenger Windows
+
+</div>
+
+<div class="featureCard">
+
+📡 Digital Flight Deck
+
+</div>
+
+</div>
+
+<h2>
+
+Interesting Facts
+
+</h2>
 
 <div class="facts">
 
-<div class="fact">
+<div>
 
-✔ Around 50% composite materials.
-
-</div>
-
-<div class="fact">
-
-✔ Fly-by-wire flight controls.
+✔ First commercial aircraft with extensive composite fuselage.
 
 </div>
 
-<div class="fact">
+<div>
 
-✔ Advanced wing flex technology.
-
-</div>
-
-<div class="fact">
-
-✔ Lower cabin altitude for comfort.
+✔ Uses electric systems instead of traditional pneumatic systems.
 
 </div>
 
-<div class="fact">
+<div>
 
-✔ Improved fuel efficiency.
+✔ Wings flex dramatically during flight.
 
 </div>
 
-<div class="fact">
+<div>
 
-✔ Used by airlines worldwide.
+✔ Lower cabin altitude improves passenger comfort.
+
+</div>
+
+<div>
+
+✔ Reduced fuel consumption by approximately 20%.
+
+</div>
+
+<div>
+
+✔ Operated by more than 80 airlines worldwide.
+
+</div>
 
 </div>
 
