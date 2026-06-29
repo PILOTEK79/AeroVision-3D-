@@ -698,3 +698,34 @@ transition:
 transform .08s linear;
 }
 
+.knowledge-btn{
+
+display:inline-block;
+
+padding:18px 40px;
+
+margin-top:20px;
+
+text-decoration:none;
+
+background:#1e293b;
+
+color:white;
+
+border:1px solid #38bdf8;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.knowledge-btn:hover{
+
+background:#38bdf8;
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 40px rgba(56,189,248,.35);
+
+}
