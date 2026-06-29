@@ -45,11 +45,7 @@ background:rgba(2,6,23,.75);
 
 backdrop-filter:blur(20px);
 
-border-bottom:1px solid rgba(255,255,255,.08);
-
 z-index:9999;
-
-transition:.3s;
 
 }
 
@@ -166,6 +162,11 @@ margin-bottom:35px;
 display:flex;
 
 gap:20px;
+
+flex-wrap:wrap;
+
+align-items:center;
+
 }
 
 .primary-btn{
