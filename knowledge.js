@@ -35,6 +35,41 @@ facts:[
 
 },
 
+airbus:{
+
+title:"🛫 Airbus A350 XWB",
+
+tag:"AIRBUS AIRCRAFT",
+
+intro:"The Airbus A350 XWB is Airbus' flagship long-haul wide-body aircraft. It combines advanced aerodynamics, lightweight carbon-fibre construction and world-class passenger comfort.",
+
+stats:[
+["15,000 km","Maximum Range"],
+["903 km/h","Cruise Speed"],
+["300–410","Passengers"],
+["53%","Composite Materials"]
+],
+
+features:[
+"🪶 Carbon Fibre Airframe",
+"⚙ Rolls-Royce Trent XWB Engines",
+"🛫 Fly-By-Wire",
+"🌍 Ultra Long Range",
+"🪟 Panoramic Windows",
+"💺 Quiet Cabin"
+],
+
+facts:[
+"Competes directly with the Boeing 787 Dreamliner.",
+"Over 50% of the structure is composite material.",
+"Powered by Rolls-Royce Trent XWB engines.",
+"Features one of the quietest cabins in aviation.",
+"Offers excellent fuel efficiency.",
+"Operated by airlines across the globe."
+]
+
+},
+
 systems:{
 
 title:"⚙ Aircraft Systems",
@@ -141,154 +176,3 @@ facts:[
 }
 
 };
-
-const menu=document.querySelectorAll(".sidebar li");
-
-const content=document.getElementById("content");
-
-menu.forEach(item=>{
-
-item.onclick=()=>{
-
-menu.forEach(i=>i.classList.remove("active"));
-
-item.classList.add("active");
-
-const page=item.dataset.page;
-
-const a=articles[page];
-
-if(!a) return;
-
-content.innerHTML=`
-
-<span class="tag">${a.tag}</span>
-
-<h1>${a.title}</h1>
-
-<p class="intro">${a.intro}</p>
-
-<div class="stats">
-
-${a.stats.map(s=>`
-
-<div class="stat">
-
-<h3>${s[0]}</h3>
-
-<p>${s[1]}</p>
-
-</div>
-
-`).join("")}
-
-</div>
-
-<h2>Highlights</h2>
-
-<div class="featureGrid">
-
-${a.features.map(f=>`
-
-<div class="featureCard">
-
-${f}
-
-</div>
-
-`).join("")}
-
-</div>
-
-<h2>Did You Know?</h2>
-
-<div class="facts">
-
-${a.facts.map(f=>`
-
-<div>${f}</div>
-
-`).join("")}
-
-</div>
-
-`;
-
-};
-
-});
-
-// ================= SEARCH =================
-
-const searchBox = document.getElementById("searchBox");
-
-searchBox.addEventListener("keyup", () => {
-
-const value = searchBox.value.toLowerCase();
-
-menu.forEach(item => {
-
-const text = item.innerText.toLowerCase();
-
-if(text.includes(value)){
-
-item.style.display="block";
-
-}else{
-
-item.style.display="none";
-
-}
-
-});
-
-});
-
-
-// ================= ANIMATION =================
-
-function animateContent(){
-
-content.animate(
-
-[
-
-{
-
-opacity:0,
-
-transform:"translateY(25px)"
-
-},
-
-{
-
-opacity:1,
-
-transform:"translateY(0px)"
-
-}
-
-],
-
-{
-
-duration:500,
-
-easing:"ease"
-
-}
-
-);
-
-}
-
-menu.forEach(item=>{
-
-item.addEventListener("click",()=>{
-
-setTimeout(animateContent,50);
-
-});
-
-});
