@@ -105,6 +105,41 @@ facts:[
 
 },
 
+a380:{
+
+title:"🛫 Airbus A380",
+
+tag:"WORLD'S LARGEST PASSENGER AIRCRAFT",
+
+intro:"The Airbus A380 is the largest passenger airliner ever built. With two full-length passenger decks, it provides exceptional comfort and capacity for long-haul travel.",
+
+stats:[
+["15,200 km","Maximum Range"],
+["903 km/h","Cruise Speed"],
+["555-853","Passengers"],
+["4","Engines"]
+],
+
+features:[
+"🏢 Double Deck Design",
+"🪑 Luxury Cabins",
+"🌍 Ultra Long Range",
+"⚙ Fly-By-Wire",
+"🔇 Quiet Interior",
+"💺 Premium Comfort"
+],
+
+facts:[
+"The A380 is the largest passenger aircraft in the world.",
+"It features two full passenger decks.",
+"Some airlines include onboard showers and lounges.",
+"It first entered service in 2007.",
+"It is powered by four large turbofan engines.",
+"It remains an aviation engineering masterpiece."
+]
+
+},
+
 systems:{
 
 title:"⚙ Aircraft Systems",
