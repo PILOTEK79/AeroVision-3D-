@@ -1,1040 +1,325 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AeroVision | Aircraft Encyclopedia</title>
+<title>AeroVision 3D</title>
 
-<link rel="stylesheet" href="knowledge.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- BACKGROUND -->
-
-<div class="background-blur blur1"></div>
-
-<div class="background-blur blur2"></div>
-
-<!-- NAVBAR -->
+<div id="progress-bar"></div>
 
 <nav>
 
 <div class="logo">
-
-✈ AeroVision
-
+✈ AeroVision 3D
 </div>
 
-<div class="nav-right">
+<div class="nav-links">
 
-<div class="search-box">
+<a href="#home">Home</a>
 
-<i class="fas fa-search"></i>
+<a href="#aircraft">Aircraft</a>
 
-<input
+<a href="#systems">Systems</a>
 
-type="text"
+<a href="knowledge.html">Knowledge Center</a>
 
-id="searchBox"
+<a href="#flight">Flight</a>
 
-placeholder="Search Aircraft...">
-
-</div>
-
-<a href="index.html" class="homeBtn">
-
-🏠 Home
-
-</a>
+<a href="#about">About</a>
 
 </div>
 
 </nav>
 
-<!-- MAIN CONTAINER -->
-
-<div class="container">
-
-<!-- SIDEBAR -->
-
-<aside class="sidebar">
-
-<div class="sidebar-top">
-
-<h2>
-
-Aircraft Encyclopedia
-
-</h2>
-
-<p>
-
-Commercial • Military • Historic
-
-</p>
-
-</div>
-
-<ul id="menu">
-
-<li class="active" data-page="aircraft">
-
-✈ Boeing 787 Dreamliner
-
-</li>
-
-<li data-page="airbus">
-
-🛫 Airbus A350 XWB
-
-</li>
-
-<li data-page="boeing747">
-
-✈ Boeing 747
-
-</li>
-
-<li data-page="a380">
-
-🛫 Airbus A380
-
-</li>
-
-<li data-page="concorde">
-
-🚀 Concorde
-
-</li>
-
-<li data-page="sr71">
-
-🛩 SR-71 Blackbird
-
-</li>
-
-<li data-page="f22">
-
-🛡 F-22 Raptor
-
-</li>
-
-<li data-page="f35">
-
-⚡ F-35 Lightning II
-
-</li>
-
-<li data-page="c17">
-
-📦 C-17 Globemaster III
-
-</li>
-
-<li data-page="b2">
-
-🌑 B-2 Spirit
-
-</li>
-
-</ul>
-
-<div class="sidebar-footer">
-
-<div class="database-card">
-
-<h3>
-
-Aircraft Database
-
-</h3>
-
-<p>
-
-10 Aircraft Available
-
-</p>
-
-<div class="progress">
-
-<div class="progress-fill"></div>
-
-</div>
-
-<small>
-
-More aircraft coming soon...
-
-</small>
-
-</div>
-
-</div>
-
-</aside>
-
-<!-- CONTENT -->
-
-<main class="content">
-
-<div id="content">
-
 <!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<span class="badge">
+✈ Boeing 787 Dreamliner
+</span>
+
+<h1>
+Explore Aviation.<br>
+Understand Engineering.
+</h1>
+
+<p>
+AeroVision 3D is an interactive aviation platform designed to visualize aircraft systems, aerodynamics, flight controls, and the engineering principles behind modern aircraft.
+</p>
+
+<div class="hero-buttons">
+
+<button
+class="primary-btn"
+onclick="document.querySelector('#systems').scrollIntoView({behavior:'smooth'})">
+
+Launch Explorer
+
+</button>
+
+<button
+class="secondary-btn"
+onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
+
+Learn More
+
+</button>
+
+<a href="knowledge.html" class="knowledge-btn">
+
+📚 Knowledge Center
+
+</a>
+
+</div>
+
+</div>
 
 <div class="hero-aircraft">
 
-<img
-
-id="aircraftImage"
-
-src="Boing 787.jpg"
-
-alt="Aircraft">
-
-<div class="hero-overlay">
-
-<span class="tag">
-
-BOEING AIRCRAFT
-
-</span>
-
-<h1 id="aircraftTitle">
-
-Boeing 787 Dreamliner
-
-</h1>
-
-<p id="aircraftIntro">
-
-The Boeing 787 Dreamliner is one of the world's most advanced commercial aircraft featuring lightweight composite materials, advanced avionics and highly efficient engines.
-
-</p>
+<img src="Boing 787.jpg" alt="Boeing 787">
 
 </div>
 
-</div>
+</section>
 
-<!-- QUICK STATS -->
-
-<section class="stats-section">
-
-<h2>
-
-Aircraft At A Glance
-
-</h2>
-
-<div class="stats-grid">
+<!-- STATS -->
+<section class="stats">
 
 <div class="stat-card">
-
-<h3 id="range">
-
-14,140 km
-
-</h3>
-
-<p>
-
-Maximum Range
-
-</p>
-
+<h2 class="counter" data-target="250">0</h2>
+<p>Aircraft Studied</p>
 </div>
 
 <div class="stat-card">
-
-<h3 id="speed">
-
-903 km/h
-
-</h3>
-
-<p>
-
-Cruise Speed
-
-</p>
-
+<h2 class="counter" data-target="500">0</h2>
+<p>Airports Covered</p>
 </div>
 
 <div class="stat-card">
-
-<h3 id="passengers">
-
-242–335
-
-</h3>
-
-<p>
-
-Passengers
-
-</p>
-
+<h2 class="counter" data-target="10000">0</h2>
+<p>Flights Simulated</p>
 </div>
 
 <div class="stat-card">
+<h2 class="counter" data-target="50">0</h2>
+<p>Aircraft Systems</p>
+</div>
 
-<h3 id="engines">
+</section>
 
-2
+<!-- AIRCRAFT INFO -->
 
-</h3>
+<section class="aircraft-info" id="aircraft">
 
-<p>
+<h2>Boeing 787 Dreamliner</h2>
 
-Engines
+<div class="info-grid">
 
-</p>
+<div class="card">
+<h3>Range</h3>
+<p>14,000+ km</p>
+</div>
 
+<div class="card">
+<h3>Cruise Speed</h3>
+<p>903 km/h</p>
+</div>
+
+<div class="card">
+<h3>Manufacturer</h3>
+<p>Boeing</p>
+</div>
+
+<div class="card">
+<h3>Role</h3>
+<p>Wide-body Airliner</p>
 </div>
 
 </div>
 
 </section>
 
+<!-- SYSTEMS -->
 
+<section class="systems" id="systems">
 
-<!-- TECHNICAL SPECIFICATIONS -->
+<h2>Aircraft Systems</h2>
 
-<section class="specifications">
+<div class="systems-grid">
 
-<h2>
-
-📊 Technical Specifications
-
-</h2>
-
-<div class="spec-grid">
-
-<div class="spec-card">
-
-<span>
-
-Manufacturer
-
-</span>
-
-<strong id="manufacturer">
-
-Boeing
-
-</strong>
-
+<div class="system-card" onclick="showInfo('wings')">
+<h3>🪽 Wings</h3>
+<p>Generate lift and maintain aircraft stability.</p>
 </div>
 
-<div class="spec-card">
-
-<span>
-
-First Flight
-
-</span>
-
-<strong id="firstFlight">
-
-2009
-
-</strong>
-
+<div class="system-card" onclick="showInfo('engines')">
+<h3>⚙ Engines</h3>
+<p>Provide thrust for flight.</p>
 </div>
 
-<div class="spec-card">
-
-<span>
-
-Service Entry
-
-</span>
-
-<strong id="service">
-
-2011
-
-</strong>
-
+<div class="system-card" onclick="showInfo('cockpit')">
+<h3>🎛 Cockpit</h3>
+<p>Control center of the aircraft.</p>
 </div>
 
-<div class="spec-card">
-
-<span>
-
-Length
-
-</span>
-
-<strong id="length">
-
-57 m
-
-</strong>
-
+<div class="system-card" onclick="showInfo('rudder')">
+<h3>🧭 Rudder</h3>
+<p>Controls yaw movement.</p>
 </div>
 
-<div class="spec-card">
-
-<span>
-
-Wingspan
-
-</span>
-
-<strong id="wingspan">
-
-60.1 m
-
-</strong>
-
+<div class="system-card" onclick="showInfo('gear')">
+<h3>🛞 Landing Gear</h3>
+<p>Supports takeoff and landing.</p>
 </div>
 
-<div class="spec-card">
-
-<span>
-
-Height
-
-</span>
-
-<strong id="height">
-
-17 m
-
-</strong>
-
-</div>
-
-<div class="spec-card">
-
-<span>
-
-Crew
-
-</span>
-
-<strong id="crew">
-
-2 Pilots
-
-</strong>
-
-</div>
-
-<div class="spec-card">
-
-<span>
-
-Maximum Speed
-
-</span>
-
-<strong id="maxspeed">
-
-954 km/h
-
-</strong>
-
+<div class="system-card" onclick="showInfo('aero')">
+<h3>🛫 Aerodynamics</h3>
+<p>Science behind flight.</p>
 </div>
 
 </div>
 
 </section>
 
+<!-- AIRCRAFT EXPLORER -->
 
+<section class="diagram-section">
 
-<!-- OVERVIEW -->
+<h2>Interactive Aircraft Explorer</h2>
 
-<section class="overview">
-
-<h2>
-
-📖 Aircraft Overview
-
-</h2>
-
-<p id="overview">
-
-The Boeing 787 Dreamliner introduced a revolutionary approach to aircraft design by replacing much of the aluminium structure with lightweight carbon-fibre reinforced composites. This innovation improves fuel efficiency, increases range and provides passengers with a quieter and more comfortable cabin experience.
-
-</p>
-
-</section>
-
-
-
-<!-- FEATURES -->
-
-<section class="features">
-
-<h2>
-
-⭐ Key Features
-
-</h2>
-
-<div id="featureGrid" class="feature-grid">
-
-<div class="feature-card">
-
-🪶 Carbon Fibre Structure
-
-</div>
-
-<div class="feature-card">
-
-⚙ GEnx / Trent 1000 Engines
-
-</div>
-
-<div class="feature-card">
-
-📡 Digital Flight Deck
-
-</div>
-
-<div class="feature-card">
-
-🛫 Fly-By-Wire
-
-</div>
-
-<div class="feature-card">
-
-🌍 Long Range Capability
-
-</div>
-
-<div class="feature-card">
-
-🪟 Electrochromic Windows
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- FACTS -->
-
-<section class="facts-section">
-
-<h2>
-
-💡 Interesting Facts
-
-</h2>
-
-<div id="factsGrid" class="facts-grid">
-
-<div class="fact-card">
-
-First commercial aircraft with a mostly composite fuselage.
-
-</div>
-
-<div class="fact-card">
-
-Consumes roughly 20% less fuel than previous generation aircraft.
-
-</div>
-
-<div class="fact-card">
-
-Its wings flex dramatically during turbulence.
-
-</div>
-
-<div class="fact-card">
-
-The cabin altitude improves passenger comfort.
-
-</div>
-
-<div class="fact-card">
-
-Uses electric systems instead of traditional pneumatic systems.
-
-</div>
-
-<div class="fact-card">
-
-Operated by airlines across the world.
-
-</div>
-
-</div>
-
-</section>
-
-<!-- AIRCRAFT GALLERY -->
-
-<section class="gallery-section">
-
-<h2>
-
-🖼 Aircraft Gallery
-
-</h2>
-
-<div class="gallery">
+<div class="aircraft-diagram">
 
 <img src="Boing 787.jpg" alt="Aircraft">
 
-<img src="747.jpg" alt="Boeing 747">
-
-<img src="a350.jpg" alt="Airbus A350">
-
-<img src="a380.jpg" alt="Airbus A380">
-
-</div>
-
-</section>
-
-
-
-<!-- RELATED AIRCRAFT -->
-
-<section class="related-section">
-
-<h2>
-
-✈ Related Aircraft
-
-</h2>
-
-<div class="related-grid">
-
-<div class="related-card"
-
-data-page="airbus">
-
-<img src="a350.jpg">
-
-<h3>
-
-Airbus A350 XWB
-
-</h3>
-
-<p>
-
-Airbus flagship long-haul aircraft.
-
-</p>
-
-<button>
-
-Explore →
-
+<button class="hotspot cockpit" onclick="showInfo('cockpit')">
+Cockpit
 </button>
 
-</div>
-
-
-
-<div class="related-card"
-
-data-page="boeing747">
-
-<img src="747.jpg">
-
-<h3>
-
-Boeing 747
-
-</h3>
-
-<p>
-
-The Queen of the Skies.
-
-</p>
-
-<button>
-
-Explore →
-
+<button class="hotspot wing" onclick="showInfo('wings')">
+Wing
 </button>
 
-</div>
-
-
-
-<div class="related-card"
-
-data-page="a380">
-
-<img src="a380.jpg">
-
-<h3>
-
-Airbus A380
-
-</h3>
-
-<p>
-
-Largest passenger aircraft ever built.
-
-</p>
-
-<button>
-
-Explore →
-
+<button class="hotspot engine" onclick="showInfo('engines')">
+Engine
 </button>
 
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- AIRCRAFT TIMELINE -->
-
-<section class="timeline-section">
-
-<h2>
-
-📅 Aircraft Timeline
-
-</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<h3>
-
-2009
-
-</h3>
-
-<p>
-
-First Flight
-
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>
-
-2011
-
-</h3>
-
-<p>
-
-Entered Service
-
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>
-
-Today
-
-</h3>
-
-<p>
-
-Operated Worldwide
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- GLOBAL OPERATORS -->
-
-<section class="operators-section">
-
-<h2>
-
-🌍 Major Operators
-
-</h2>
-
-<div class="operators-grid">
-
-<div>
-
-🇸🇬 Singapore Airlines
-
-</div>
-
-<div>
-
-🇯🇵 ANA
-
-</div>
-
-<div>
-
-🇶🇦 Qatar Airways
-
-</div>
-
-<div>
-
-🇦🇪 Etihad Airways
-
-</div>
-
-<div>
-
-🇬🇧 British Airways
-
-</div>
-
-<div>
-
-🇦🇺 Qantas
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- VIDEO -->
-
-<section class="video-section">
-
-<h2>
-
-🎥 Aviation Documentary
-
-</h2>
-
-<div class="video-card">
-
-<i class="fa-solid fa-circle-play"></i>
-
-<h3>
-
-Watch Aircraft Documentary
-
-</h3>
-
-<p>
-
-Learn how modern aircraft are designed, tested and operated.
-
-</p>
-
-<a
-
-href="https://www.youtube.com/results?search_query=Boeing+787+Documentary"
-
-target="_blank"
-
-class="watchBtn">
-
-▶ Watch Now
-
-</a>
-
-</div>
-
-</section>
-
-<!-- AVIATION RESOURCES -->
-
-<section class="resources-section">
-
-<h2>
-
-📚 Aviation Resources
-
-</h2>
-
-<div class="resource-grid">
-
-<a href="https://www.boeing.com" target="_blank" class="resource-card">
-
-<i class="fa-solid fa-plane"></i>
-
-<h3>Boeing</h3>
-
-<p>Official aircraft information.</p>
-
-</a>
-
-<a href="https://www.airbus.com" target="_blank" class="resource-card">
-
-<i class="fa-solid fa-jet-fighter"></i>
-
-<h3>Airbus</h3>
-
-<p>Commercial aircraft and technology.</p>
-
-</a>
-
-<a href="https://www.faa.gov" target="_blank" class="resource-card">
-
-<i class="fa-solid fa-tower-control"></i>
-
-<h3>FAA</h3>
-
-<p>Aviation regulations and safety.</p>
-
-</a>
-
-<a href="https://www.nasa.gov" target="_blank" class="resource-card">
-
-<i class="fa-solid fa-rocket"></i>
-
-<h3>NASA</h3>
-
-<p>Aerospace research and innovation.</p>
-
-</a>
-
-</div>
-
-</section>
-
-
-
-<!-- NEWSLETTER -->
-
-<section class="newsletter">
-
-<h2>
-
-📩 Stay Updated
-
-</h2>
-
-<p>
-
-More aircraft, airports, aviation systems and military aircraft
-will be added in future AeroVision updates.
-
-</p>
-
-<div class="newsletter-box">
-
-<input
-
-type="email"
-
-placeholder="Enter your email (Demo Only)">
-
-<button>
-
-Subscribe
-
+<button class="hotspot gear" onclick="showInfo('gear')">
+Gear
 </button>
 
 </div>
 
 </section>
 
+<!-- FLIGHT PRINCIPLES -->
 
+<section class="flight-principles" id="flight">
+
+<h2>Principles of Flight</h2>
+
+<div class="info-grid">
+
+<div class="card">
+<h3>Lift</h3>
+<p>The upward force generated by wings.</p>
+</div>
+
+<div class="card">
+<h3>Weight</h3>
+<p>The force pulling the aircraft downward.</p>
+</div>
+
+<div class="card">
+<h3>Thrust</h3>
+<p>Forward force produced by engines.</p>
+</div>
+
+<div class="card">
+<h3>Drag</h3>
+<p>Air resistance opposing motion.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="viewer3d">
+
+<h2>3D Aircraft Viewer</h2>
+
+<div id="aircraft-viewer"></div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="aircraft-info" id="about">
+
+<h2>About AeroVision 3D</h2>
+
+<div class="card">
+
+<p>
+AeroVision 3D is an aviation learning platform focused on helping students, enthusiasts, and future engineers understand aircraft systems, aerodynamics, and flight mechanics through interactive experiences.
+</p>
+
+</div>
+
+</section>
+
+<!-- POPUP -->
+
+<div id="popup">
+
+<div class="popup-content">
+
+<span id="closeBtn">✖</span>
+
+<h2 id="popupTitle"></h2>
+
+<div id="popupText"></div>
+
+</div>
+
+</div>
 
 <!-- FOOTER -->
 
 <footer>
 
-<div class="footer-left">
-
-<h2>
-
-✈ AeroVision
-
-</h2>
-
 <p>
-
-Interactive Aviation Encyclopedia
-
+AeroVision 3D © 2026
 </p>
-
-</div>
-
-<div class="footer-center">
-
-<p>
-
-Developed using
-
-HTML • CSS • JavaScript
-
-</p>
-
-<p>
-
-Future Updates:
-
-3D Models • Airport Explorer • Flight Radar • AI Assistant
-
-</p>
-
-</div>
-
-<div class="footer-right">
-
-<p>
-
-© 2026 AeroVision
-
-</p>
-
-<p>
-
-Version 2.0
-
-</p>
-
-</div>
 
 </footer>
 
-</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 
-</main>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
-</div>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
 
-<script src="knowledge.js"></script>
+<script src="script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+
+<script src="viewer.js"></script>
 
 </body>
 
 </html>
-
