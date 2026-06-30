@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AeroVision | Knowledge Center</title>
+<title>AeroVision | Aircraft Encyclopedia</title>
 
 <link rel="stylesheet" href="knowledge.css">
 
@@ -15,13 +15,18 @@
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<div class="background-blur blur1"></div>
+
+<div class="background-blur blur2"></div>
 
 <nav>
 
@@ -33,10 +38,16 @@
 
 <div class="nav-right">
 
+<div class="search-box">
+
+<i class="fas fa-search"></i>
+
 <input
 type="text"
 id="searchBox"
-placeholder="🔍 Search articles...">
+placeholder="Search Aircraft...">
+
+</div>
 
 <a href="index.html" class="homeBtn">
 
@@ -54,39 +65,117 @@ placeholder="🔍 Search articles...">
 
 <aside class="sidebar">
 
+<div class="sidebar-top">
+
 <h2>
 
-Knowledge Center
+Aircraft Encyclopedia
 
 </h2>
 
-<ul>
+<p>
+
+Commercial • Military • Historic
+
+</p>
+
+</div>
+
+<ul id="menu">
 
 <li class="active" data-page="aircraft">
+
 ✈ Boeing 787 Dreamliner
+
 </li>
 
 <li data-page="airbus">
+
 🛫 Airbus A350 XWB
+
 </li>
 
 <li data-page="boeing747">
+
 ✈ Boeing 747
+
 </li>
 
 <li data-page="a380">
+
 🛫 Airbus A380
+
 </li>
 
 <li data-page="concorde">
-✈ Concorde
+
+🚀 Concorde
+
 </li>
 
 <li data-page="sr71">
+
 🛩 SR-71 Blackbird
+
+</li>
+
+<li data-page="f22">
+
+🛡 F-22 Raptor
+
+</li>
+
+<li data-page="f35">
+
+⚡ F-35 Lightning II
+
+</li>
+
+<li data-page="c17">
+
+📦 C-17 Globemaster
+
+</li>
+
+<li data-page="b2">
+
+🌑 B-2 Spirit
+
 </li>
 
 </ul>
+
+<div class="sidebar-footer">
+
+<div class="database-card">
+
+<h3>
+
+Aircraft Database
+
+</h3>
+
+<p>
+
+10 Aircraft Available
+
+</p>
+
+<div class="progress">
+
+<div class="progress-fill"></div>
+
+</div>
+
+<small>
+
+More aircraft added every update
+
+</small>
+
+</div>
+
+</div>
 
 </aside>
 
@@ -96,82 +185,228 @@ Knowledge Center
 
 <div id="content">
 
+<!-- Hero -->
+
+<div class="hero-aircraft">
+
+<img
+id="aircraftImage"
+src="images/787.jpg"
+alt="Aircraft">
+
+<div class="hero-overlay">
+
 <span class="tag">
 
 BOEING AIRCRAFT
 
 </span>
 
-<h1>
+<h1 id="aircraftTitle">
 
 Boeing 787 Dreamliner
 
 </h1>
 
-<p class="intro">
+<p id="aircraftIntro">
 
-The Boeing 787 Dreamliner is among the world's most advanced
-wide-body commercial aircraft. It combines lightweight
-carbon-fiber composites, highly efficient engines,
-digital avionics and advanced aerodynamics to provide
-better fuel efficiency and passenger comfort.
+The Boeing 787 Dreamliner combines lightweight composite materials, advanced aerodynamics and highly efficient engines to redefine modern long-haul travel.
 
 </p>
 
-<div class="stats">
+</div>
 
-<div class="stat">
+</div>
 
-<h3>14,140 km</h3>
+<!-- QUICK STATS -->
+
+<section class="stats-section">
+
+<div class="stat-card">
+
+<i class="fa-solid fa-earth-americas"></i>
+
+<h2 id="range">14,140 km</h2>
 
 <p>Maximum Range</p>
 
 </div>
 
-<div class="stat">
+<div class="stat-card">
 
-<h3>903 km/h</h3>
+<i class="fa-solid fa-gauge-high"></i>
+
+<h2 id="speed">903 km/h</h2>
 
 <p>Cruise Speed</p>
 
 </div>
 
-<div class="stat">
+<div class="stat-card">
 
-<h3>242–335</h3>
+<i class="fa-solid fa-users"></i>
+
+<h2 id="passengers">242–335</h2>
 
 <p>Passengers</p>
 
 </div>
 
-<div class="stat">
+<div class="stat-card">
 
-<h3>50%</h3>
+<i class="fa-solid fa-gears"></i>
 
-<p>Composite Material</p>
+<h2 id="engines">2</h2>
+
+<p>Engines</p>
 
 </div>
 
-</div>
+</section>
+
+
+
+<!-- SPECIFICATIONS -->
+
+<section class="specifications">
 
 <h2>
 
-Overview
+📊 Technical Specifications
 
 </h2>
 
-<p>
+<div class="spec-grid">
 
-The Dreamliner introduced one of the largest technological
-advancements in commercial aviation by replacing aluminium
-with composite materials, reducing weight while increasing
-strength and efficiency.
+<div class="spec">
 
-</p>
+<span>Manufacturer</span>
+
+<strong id="manufacturer">
+
+Boeing
+
+</strong>
+
+</div>
+
+<div class="spec">
+
+<span>First Flight</span>
+
+<strong id="firstFlight">
+
+15 December 2009
+
+</strong>
+
+</div>
+
+<div class="spec">
+
+<span>Entered Service</span>
+
+<strong id="service">
+
+2011
+
+</strong>
+
+</div>
+
+<div class="spec">
+
+<span>Length</span>
+
+<strong id="length">
+
+57 m
+
+</strong>
+
+</div>
+
+<div class="spec">
+
+<span>Wingspan</span>
+
+<strong id="wingspan">
+
+60.1 m
+
+</strong>
+
+</div>
+
+<div class="spec">
+
+<span>Height</span>
+
+<strong id="height">
+
+17 m
+
+</strong>
+
+</div>
+
+<div class="spec">
+
+<span>Crew</span>
+
+<strong id="crew">
+
+2 Pilots
+
+</strong>
+
+</div>
+
+<div class="spec">
+
+<span>Maximum Speed</span>
+
+<strong id="maxspeed">
+
+954 km/h
+
+</strong>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- OVERVIEW -->
+
+<section class="overview">
 
 <h2>
 
-Key Features
+📖 Aircraft Overview
+
+</h2>
+
+<p id="overviewText">
+
+The Boeing 787 Dreamliner introduced a new generation of commercial aviation by using carbon-fibre reinforced composites throughout much of its structure. This reduced weight while increasing efficiency, allowing airlines to operate longer routes with lower fuel consumption and improved passenger comfort.
+
+</p>
+
+</section>
+
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<h2>
+
+⭐ Key Features
 
 </h2>
 
@@ -179,31 +414,13 @@ Key Features
 
 <div class="featureCard">
 
-🪶 Lightweight Carbon Fiber
+🪶 Carbon Fibre Structure
 
 </div>
 
 <div class="featureCard">
 
-⚙ Efficient Turbofan Engines
-
-</div>
-
-<div class="featureCard">
-
-🛫 Fly-By-Wire Controls
-
-</div>
-
-<div class="featureCard">
-
-🌍 Long Range Capability
-
-</div>
-
-<div class="featureCard">
-
-🪟 Larger Passenger Windows
+⚙ Advanced Turbofan Engines
 
 </div>
 
@@ -213,53 +430,335 @@ Key Features
 
 </div>
 
+<div class="featureCard">
+
+🛫 Fly-by-Wire System
+
 </div>
+
+<div class="featureCard">
+
+🌍 Ultra Long Range
+
+</div>
+
+<div class="featureCard">
+
+🪟 Large Electrochromic Windows
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FACTS -->
+
+<section class="facts-section">
 
 <h2>
 
-Interesting Facts
+💡 Did You Know?
 
 </h2>
 
 <div class="facts">
 
+<div class="fact">
+
+First commercial aircraft with a mostly composite fuselage.
+
+</div>
+
+<div class="fact">
+
+Consumes roughly 20% less fuel than similar older aircraft.
+
+</div>
+
+<div class="fact">
+
+Uses electric systems instead of many pneumatic systems.
+
+</div>
+
+<div class="fact">
+
+Cabin pressure improves passenger comfort on long flights.
+
+</div>
+
+<div class="fact">
+
+The wings flex dramatically during turbulence.
+
+</div>
+
+<div class="fact">
+
+Operated by airlines around the world.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGE GALLERY -->
+
+<section class="gallery-section">
+
+<h2>
+
+🖼 Aircraft Gallery
+
+</h2>
+
+<div class="gallery">
+
+<img src="images/787.jpg" alt="Aircraft">
+
+<img src="images/cockpit.jpg" alt="Cockpit">
+
+<img src="images/engine.jpg" alt="Engine">
+
+<img src="images/wing.jpg" alt="Wing">
+
+</div>
+
+</section>
+
+
+
+<!-- RELATED AIRCRAFT -->
+
+<section class="related">
+
+<h2>
+
+✈ Related Aircraft
+
+</h2>
+
+<div class="related-grid">
+
+<div class="related-card" data-page="airbus">
+
+<h3>
+
+🛫 Airbus A350
+
+</h3>
+
+<p>
+
+Closest competitor to the Dreamliner.
+
+</p>
+
+<button>
+
+Explore →
+
+</button>
+
+</div>
+
+<div class="related-card" data-page="boeing747">
+
+<h3>
+
+✈ Boeing 747
+
+</h3>
+
+<p>
+
+The legendary Queen of the Skies.
+
+</p>
+
+<button>
+
+Explore →
+
+</button>
+
+</div>
+
+<div class="related-card" data-page="a380">
+
+<h3>
+
+🛫 Airbus A380
+
+</h3>
+
+<p>
+
+Largest passenger aircraft ever built.
+
+</p>
+
+<button>
+
+Explore →
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- COMPARE -->
+
+<section class="compare">
+
+<h2>
+
+⚖ Compare Aircraft
+
+</h2>
+
+<p>
+
+Quickly compare aircraft specifications, range, passenger capacity and performance.
+
+</p>
+
+<div class="compare-buttons">
+
+<button id="compareBtn">
+
+Compare With Airbus A350
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- AVIATION VIDEO -->
+
+<section class="video-section">
+
+<h2>
+
+🎥 Learn More
+
+</h2>
+
+<div class="video-card">
+
+<p>
+
+Watch an aviation documentary or aircraft walkthrough.
+
+</p>
+
+<a
+
+href="https://www.youtube.com/results?search_query=boeing+787+documentary"
+
+target="_blank"
+
+class="videoBtn">
+
+▶ Watch on YouTube
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- ROUTE MAP -->
+
+<section class="route-map">
+
+<h2>
+
+🌍 Typical Long-Haul Routes
+
+</h2>
+
+<div class="route-grid">
+
 <div>
 
-✔ First commercial aircraft with extensive composite fuselage.
+🇬🇧 London → 🇯🇵 Tokyo
 
 </div>
 
 <div>
 
-✔ Uses electric systems instead of traditional pneumatic systems.
+🇺🇸 New York → 🇮🇳 Delhi
 
 </div>
 
 <div>
 
-✔ Wings flex dramatically during flight.
+🇸🇬 Singapore → 🇬🇧 London
 
 </div>
 
 <div>
 
-✔ Lower cabin altitude improves passenger comfort.
-
-</div>
-
-<div>
-
-✔ Reduced fuel consumption by approximately 20%.
-
-</div>
-
-<div>
-
-✔ Operated by more than 80 airlines worldwide.
+🇦🇺 Sydney → 🇺🇸 Los Angeles
 
 </div>
 
 </div>
+
+</section>
+
+
+
+<footer>
+
+<div class="footer-left">
+
+<h3>
+
+✈ AeroVision Knowledge Center
+
+</h3>
+
+<p>
+
+Interactive Aviation Encyclopedia
+
+</p>
+
+</div>
+
+<div class="footer-right">
+
+<p>
+
+© 2026 AeroVision
+
+</p>
+
+<p>
+
+Built with HTML • CSS • JavaScript
+
+</p>
+
+</div>
+
+</footer>
 
 </div>
 
