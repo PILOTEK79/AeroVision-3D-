@@ -70,6 +70,41 @@ facts:[
 
 },
 
+boeing747:{
+
+title:"✈ Boeing 747",
+
+tag:"QUEEN OF THE SKIES",
+
+intro:"The Boeing 747 is one of the most iconic aircraft ever built. Introduced in 1970, it revolutionized long-haul air travel with its distinctive hump-backed upper deck and enormous passenger capacity.",
+
+stats:[
+["13,450 km","Maximum Range"],
+["920 km/h","Cruise Speed"],
+["416-660","Passengers"],
+["4","Engines"]
+],
+
+features:[
+"👑 Iconic Upper Deck",
+"🛫 Four Powerful Engines",
+"🌍 Long-Haul Operations",
+"📦 Cargo Variant Available",
+"🪟 Spacious Cabin",
+"⚙ Advanced Aerodynamics"
+],
+
+facts:[
+"The Boeing 747 was nicknamed the 'Queen of the Skies'.",
+"It was the world's first jumbo jet.",
+"More than 1,500 aircraft were produced.",
+"It served airlines for over 50 years.",
+"Many 747s now operate as cargo aircraft.",
+"It was used as Air Force One for decades."
+]
+
+},
+
 systems:{
 
 title:"⚙ Aircraft Systems",
